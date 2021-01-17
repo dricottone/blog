@@ -1,0 +1,28 @@
+/* Header content */
+table#header {
+  width: 100%;
+  margin-bottom: 1em;
+  border-collapse: collapse;
+}
+table#header td.main {
+  font-size: 250%;
+  padding-left: 10px;
+  white-space: nowrap;
+}
+table#header td.main a {
+  color: #000;
+}
+table#header td.sub {
+  color: #777;
+  border-top: solid 1px #ccc;
+  padding-left: 10px;
+}
+table#header td.sub a {
+  color: #777;
+}
+/* Header logos */
+table#header td.logo {
+  width: 96px;
+  vertical-align: top;
+}
+

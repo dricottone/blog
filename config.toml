@@ -1,0 +1,6 @@
+baseURL = "https://dominic-ricottone.com/"
+languageCode = "en-us"
+title = "Dominic Ricottone"
+disableKinds = ["taxonomy", "taxonomyTerm"]
+summaryLength = 20
+

@@ -1,0 +1,59 @@
+div#content {
+  margin: 0;
+  max-width: 800px;
+  padding-left: 10px;
+}
+ul#list-posts {
+  list-style-type: none; /* no bullets for post lists */
+  margin: 0;
+  padding: 0;
+}
+ul#list-posts li {
+  margin: 0;
+  padding: 0; /* no indentation on list item--title should not be indented */
+}
+div.post p {
+  line-height: 2em; /* increased line height for post content */
+  text-indent: 2em; /* indentation for first lines (same as on lists) */
+}
+div.post p.read-more {
+  font-style: italic;
+  margin: 0 0 0.25em 0; /* no top spacing on post link */
+  text-indent: 0; /* do not indent post link */
+}
+
+/* Table of Contents */
+div#toc {
+  left: calc(900px + 2em);
+  margin: 5em 0 0 1em;
+  padding: 1em;
+  position: fixed;
+  top: 0;
+  width: 300px;
+}
+@media (max-width: 1200px) {
+  div#toc {
+    float: right;
+    margin: 0 0 0 2em;
+    padding: 0;
+    position: static;
+  }
+}
+@media (max-width: 800px) {
+  div#toc {
+    display: none;
+    margin: 0;
+    padding: 0;
+    position: static;
+  }
+}
+div#toc h2 {
+  margin: 0;
+}
+div#toc ul {
+  margin: 0;
+}
+div#toc li {
+  margin: 0.5em 0 0 0;
+}
+

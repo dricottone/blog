@@ -1,0 +1,17 @@
+
+{{ define "main" }}
+
+{{ if (.Params.toc) }}
+<div id="toc">
+  <h2>Table of Contents</h2>
+  {{.TableOfContents}}
+</div>
+{{ end }}
+
+<article>
+  <!-- pulls in content/<collection>/*.md -->
+  {{.Content}}
+</article>
+
+{{ end }}
+

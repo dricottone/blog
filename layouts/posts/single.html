@@ -1,0 +1,32 @@
+
+{{ define "main" }}
+
+<article>
+
+  <h1>{{.Title}}</h1>
+
+  <!-- see https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference -->
+  <p><b>Date:</b> {{.Date.Format "Mon 2006-01-02"}}</p>
+  <p><a href="{{.Permalink}}">Permalink</a></p>
+  <br />
+
+  <!-- pulls in content/posts/*.md -->
+  <div class="post">
+    {{.Content}}
+  </div>
+
+</article>
+
+<br />
+
+<div>
+  {{ with .PrevInSection }}
+    <p>Previous article: <a href="{{.Permalink}}">{{.Title}}</a></p>
+  {{ end }}
+  {{ with .NextInSection }}
+    <p>Next article: <a href="{{.Permalink}}">{{.Title}}</a></p>
+  {{ end }}
+</div>
+
+{{ end }}
+
