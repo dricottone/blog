@@ -1,12 +1,13 @@
 /* Header content */
 table#header {
-  width: 100%;
-  margin-bottom: 1em;
   border-collapse: collapse;
+  margin-bottom: 1em;
+  width: 100%;
 }
 table#header td.main {
-  font-size: 250%;
-  padding-left: 10px;
+  color: #000;
+  font-size: 2.5em;
+  padding: 0 0 0 10px;
   white-space: nowrap;
 }
 table#header td.main a {
@@ -15,7 +16,8 @@ table#header td.main a {
 table#header td.sub {
   color: #777;
   border-top: solid 1px #ccc;
-  padding-left: 10px;
+  font-size: 1em;
+  padding: 0 0 0 10px;
 }
 table#header td.sub a {
   color: #777;

@@ -1,8 +1,5 @@
-TARGET_IP=alpine1.local
 TARGET_USER=deploy
-TARGET_DIR=/var/public-blog
-TARGET_HOST=$(TARGET_USER)@$(TARGET_IP)
-DOCKER_URL=ssh://$(TARGET_HOST)
+TARGET_HOST=$(TARGET_USER)@ubuntu2.intra.dominic-ricottone.com
 
 .PHONY: dev
 dev:
@@ -16,7 +13,7 @@ build: clean
 sync: build
 	rsync --recursive --links --compress --delete \
 		--chown=$(TARGET_USER):$(TARGET_USER) \
-		public/ $(TARGET_HOST):$(TARGET_DIR)/html/
+		public/ $(TARGET_HOST):/var/deploy/resources/webroot/
 
 .PHONY: clean
 clean:
