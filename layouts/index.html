@@ -3,7 +3,6 @@
 
 <div>
   <!-- pulls in content/_index.md -->
-  <h1>Welcome!</h1>
   {{.Content}}
 </div>
 
@@ -14,8 +13,9 @@
 
     <li>
       <!-- see https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference -->
-      <h1><a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}}</a></h1>
+      <h2><a href="{{.Permalink}}">{{.Title}}</a></h2>
       <div class="post">
+        <p><i>posted on {{.Date.Format "2006-01-02"}}</i></p>
         <p>{{.Summary}}</p>
         {{ if .Truncated }}
         <p class="read-more"><a href="{{.Permalink}}">Read More…</a></p>

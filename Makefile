@@ -1,9 +1,9 @@
 TARGET_USER=deploy
-TARGET_HOST=$(TARGET_USER)@ubuntu2.intra.dominic-ricottone.com
+TARGET_HOST=deploy-aws2
 
 .PHONY: dev
 dev:
-	hugo server -buildDrafts
+	hugo server --buildDrafts --bind 127.0.0.1 --port 8080
 
 .PHONY: build
 build: clean
@@ -13,7 +13,7 @@ build: clean
 sync: build
 	rsync --recursive --links --compress --delete \
 		--chown=$(TARGET_USER):$(TARGET_USER) \
-		public/ $(TARGET_HOST):/var/deploy/resources/webroot/
+		public/ $(TARGET_HOST):/var/deploy/webroot/
 
 .PHONY: clean
 clean:

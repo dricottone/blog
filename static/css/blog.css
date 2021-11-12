@@ -13,13 +13,12 @@ ul#list-posts li {
   padding: 0; /* no indentation on list item--title should not be indented */
 }
 div.post p {
-  line-height: 2em; /* increased line height for post content */
-  text-indent: 2em; /* indentation for first lines (same as on lists) */
+  padding: 0 0 0 2em;
+  text-indent: 2em;
 }
 div.post p.read-more {
   font-style: italic;
-  margin: 0 0 0.25em 0; /* no top spacing on post link */
-  text-indent: 0; /* do not indent post link */
+  text-indent: 0;
 }
 
 /* Table of Contents */
@@ -51,7 +50,8 @@ div#toc h2 {
   margin: 0;
 }
 div#toc ul {
-  margin: 0;
+  list-style: none;
+  margin: 0 0 0 2em;
 }
 div#toc li {
   margin: 0.5em 0 0 0;

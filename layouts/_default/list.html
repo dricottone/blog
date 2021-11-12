@@ -12,13 +12,12 @@
   <li>
 
     <!-- see https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference -->
-    <h1><a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}}</a></h2>
+    <h2><a href="{{.Permalink}}">{{.Title}}</a></h2>
     <div class="post">
+      <p><i>posted on {{.Date.Format "2006-01-02"}}</i></p>
       <p>{{.Summary}}</p>
       {{ if .Truncated }}
-      <div>
-        <i><a href="{{.Permalink}}">Read More…</a></i>
-      </div>
+      <p><a href="{{.Permalink}}">Read More…</a></p>
       {{ end }}
     </div>
 

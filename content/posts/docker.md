@@ -8,7 +8,7 @@ I've been playing with Alpine Linux and Docker for the last few weeks. I've
 decided that Docker with an immutable Alpine Linux installation achieves
 everything I want from encapsulation without locking me into a vendor (i.e.
 SnapCraft), and also allowing me room for scaling up (i.e. kubernetes). And
-now I have severeal private web services and *this very web page* running
+now I have several private web services and *this very web page* running
 through this architecture.
 
 On the side I've been working on Golang as a Python replacement in my long-

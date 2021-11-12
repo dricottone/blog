@@ -1,4 +1,3 @@
-
 ---
 title: "Playing with Web Services"
 date: 2020-04-15T12:24:13-04:00

@@ -1,10 +1,24 @@
-
 ---
 title: Welcome!
+site_title: true
 ---
 
-This is the personal and professional website of Dominic Ricottone. I work in market research as a Data Management Analyst.
-I have experience across multiple survey operations roles, including web survey programming, RIM weighting, and data entry.
+Dominic Ricottone is a data management analyst in the field of market research.
+For three years he has worked at Fors Marsh Group, a data-driven company
+specializing in federal contracts. Dominic works on a variety of high-profile
+government programs such as:
 
-You can find my CV, code repositories, and other personal work here. Below are recent blog posts.
++ JAMRS Youth Poll
++ FVAP Overseas Citizens Population Survey
++ NIST Manufacturing Extension Program
++ FirstNet Economic Evaluation
+
+Dominic has experience throughout the survey research operations stack, ranging
+from survey programming to weight computation. He has drafted technical chapters
+for bi-annual research reports. Prior to joining Fors Marsh Group, he has
+worked for the Harris Poll in a similar role, and for Chris Harris & Associate
+as a political campaign finance intern.
+
+You can find my CV, code repositories, and other personal work here. Below are
+my most recent blog posts.
 

@@ -1,4 +1,3 @@
-
 ---
 title: "Setting up Hugo"
 date: 2020-01-24T19:32:43-05:00

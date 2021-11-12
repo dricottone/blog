@@ -204,6 +204,28 @@ div#cgit table.list td a {
 	padding: 1em 0;
 }
 
+/* Collapse spacing around all of these 'decorative' links that appear in tables and lists */
+div#cgit table.list td a.tag-deco {
+	display: inline-block;
+	padding: 0;
+}
+div#cgit table.list td a.branch-deco {
+	display: inline-block;
+	padding: 0;
+}
+div#cgit table.list td a.remote-deco {
+	display: inline-block;
+	padding: 0;
+}
+div#cgit table.list td a.deco {
+	display: inline-block;
+	padding: 0;
+}
+div#cgit table.list td a.button {
+	display: inline;
+	padding: 0 1em;
+}
+
 div#cgit table.list td a.ls-dir {
 	font-weight: bold;
 	color: #00f;
@@ -619,6 +641,7 @@ div#cgit div.footer a:hover {
 }
 
 div#cgit a.branch-deco {
+	display: inline-block;
 	color: #000;
 	margin: 0px 0.5em;
 	padding: 0px 0.25em;
@@ -627,6 +650,7 @@ div#cgit a.branch-deco {
 }
 
 div#cgit a.tag-deco {
+	display: inline-block;
 	color: #000;
 	margin: 0px 0.5em;
 	padding: 0px 0.25em;
@@ -635,6 +659,7 @@ div#cgit a.tag-deco {
 }
 
 div#cgit a.remote-deco {
+	display: inline-block;
 	color: #000;
 	margin: 0px 0.5em;
 	padding: 0px 0.25em;
@@ -643,6 +668,7 @@ div#cgit a.remote-deco {
 }
 
 div#cgit a.deco {
+	display: inline-block;
 	color: #000;
 	margin: 0px 0.5em;
 	padding: 0px 0.25em;
