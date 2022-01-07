@@ -1,7 +1,13 @@
-
 <head>
   <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- Page titles
+        + Use "MyFileTitle | Dominic Ricottone"
+        + Exceptions for...
+           + site homepage
+           + if "site_title = true" is set in the file
+          ... in which case use just "Dominic Ricottone"
+    -->
   {{ $title := print .Title " | " .Site.Title }}
   {{ if or (.IsHome) (.Params.site_title) }}{{ $title = .Site.Title }}{{ end }}
   <title>{{ $title }}</title>
@@ -9,30 +15,36 @@
   <!--Stylesheets-->
   <link rel="stylesheet" type="text/css" href="/css/common.css" />
   <link rel="stylesheet" type="text/css" href="/css/header.css" />
-  <link rel="stylesheet" type="text/css" href="/css/navi.css" />
   <link rel="stylesheet" type="text/css" href="/css/blog.css" />
-  <!--<link rel="stylesheet" type="text/css" href="/css/cgit.css" />-->
-  <!--<link rel="stylesheet" type="text/css" href="/css/gallery.css" />-->
-
-  <!--External Dependencies-->
-  <script src="/js/jquery-3.5.1.min.js"></script>
-  <!--<link rel="stylesheet" type="text/css" href="/css/lightbox-2.11.3.min.css" />-->
-  <!--<script src="/js/lightbox-2.11.3.min.js"></script>-->
+  {{ if .Params.cgit }}     <link rel="stylesheet" type="text/css" href="/css/cgit.css" /> {{ end }}
+  {{ if .Params.lightbox }} <link rel="stylesheet" type="text/css" href="/css/gallery.css" /> {{ end }}
+  {{ if .Params.lightbox }} <link rel="stylesheet" type="text/css" href="/css/lightbox-2.11.3.min.css" /> {{ end }}
 
   <!--JavaScript-->
+  <script src="/js/jquery-3.5.1.min.js"></script>
+  {{ if .Params.chat }}     <script src="/js/chat.js"></script> {{ end }}
+  {{ if .Params.lightbox }} <script src="/js/lightbox-2.11.3.min.js"></script> {{ end }}
   <script>
 $(document).ready(function() {
-  $(".trigger").on("click", function() {
+  $(".trigger").on("click keypress", function(event) {
+    if (event.type === "keypress") {
+      //jQuery's `which` normalizes `keyCode` and `charCode`
+      if (event.which !== 13) {
+        return;
+      }
+    }
+
+    // Add `selection` class to this element
     $(this).toggleClass("selection");
-    var classes = this.className.split(/\s+/);
-    var target_classes = classes.filter(c => c.startsWith("target-"));
-    for (var c=0; c<target_classes.length; c++) {
-      var target = "." + target_classes[c].split(/\-/)[1];
+
+    // Add `shown` class to children elements
+    let all_classes = this.className.split(/\s+/);
+    let classes = all_classes.filter(c => c.startsWith("target-"));
+    for (let c = 0; c < classes.length; c++) {
+      var target = "." + classes[c].split(/\-/)[1];
       $(target).toggleClass("shown");
     }
   });
 });
   </script>
-
 </head>
-
