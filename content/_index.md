@@ -19,6 +19,5 @@ for bi-annual research reports. Prior to joining Fors Marsh Group, he has
 worked for the Harris Poll in a similar role, and for Chris Harris & Associate
 as a political campaign finance intern.
 
-You can find my CV, code repositories, and other personal work here. Below are
-my most recent blog posts.
+You can find my CV, code repositories, and other personal work here.
 
