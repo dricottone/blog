@@ -1,31 +1,24 @@
-
 {{ define "main" }}
-
 <div>
-  <!-- pulls in content/_index.md -->
   {{.Content}}
 </div>
 
-<!-- pulls in content/posts/*.md -->
+<hr />
+<h2>Blog</h2>
+<p>These are my three most recent blog posts. More posts can be found on the 'Blog' tab.<p>
+
 <ul id="list-posts">
   {{ with .Site.GetPage "/posts" }}
-    {{ range .Pages }}
-
+    {{ range first 3 .Pages }}
     <li>
-      <!-- see https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference -->
       <h2><a href="{{.Permalink}}">{{.Title}}</a></h2>
       <div class="post">
-        <p><i>posted on {{.Date.Format "2006-01-02"}}</i></p>
+        <p><i>posted on {{.Date.Format "2006-01-02"}}</i></p> <!-- see https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference -->
         <p>{{.Summary}}</p>
-        {{ if .Truncated }}
-        <p class="read-more"><a href="{{.Permalink}}">Read More…</a></p>
-        {{ end }}
+        {{ if .Truncated }} <p class="read-more"><a href="{{.Permalink}}">Read More...</a></p> {{ end }}
       </div>
     </li>
-
     {{ end }}
   {{ end }}
 </ul>
-
 {{ end }}
-
