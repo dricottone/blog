@@ -3,9 +3,6 @@
 This repo holds the web content of my blog, which lives at
 [dominic-ricottone.com](https://www.dominic-ricottone.com).
 
-All web servers on [Alpine1](https://alpine1.dominic-ricottone.com) look to
-this web server for static files, including CSS and JavaScript.
-
 ## License
 
 There are vendored (i.e. minified) copies of jQuery present in this repo.
