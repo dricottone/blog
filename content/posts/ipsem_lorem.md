@@ -1,4 +1,3 @@
-
 ---
 title: "ipsem lorem"
 date: 2020-01-11T08:42:51-05:00

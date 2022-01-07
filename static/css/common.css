@@ -218,6 +218,13 @@ ul#list-navi li.shown.trigger.selection {
   background-origin: content-box;
 }
 
+/* center horizontal rules */
+ul#list-navi hr {
+  width: 80%;
+  margin: 0 auto 0.5em auto;
+  color: #fff;
+}
+
 /* menu items */
 select#menu-navi:focus {
   padding: 0 0.5em 0 0;
