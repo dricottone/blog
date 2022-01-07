@@ -5,7 +5,7 @@ body {
 main {
   font-family: sans-serif;
   font-size: 10pt;
-  margin: 0 0 0 calc(100px + 1em);
+  margin: 0;
   padding: 4px;
 }
 
@@ -67,6 +67,22 @@ ul {
 }
 li {
   margin: 0;
+  line-height: 2em;
+}
+option {
+  line-height: 2em;
+  margin: 0;
+  padding: 0;
+}
+select {
+  line-height: 2em;
+  margin: 0;
+  padding: 0;
+}
+label {
+  line-height: 2em;
+  margin: 0;
+  padding: 0;
 }
 
 table {
@@ -85,3 +101,132 @@ td {
   padding: 0;
 }
 
+/* navigation by sidebar (for desktop screens) */
+main {
+  margin: 0 0 0 calc(100px + 1em);
+}
+div#navi {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background-color: #303030;
+  scrollbar-color: #808080 #303030;
+}
+ul#list-navi {
+  width: 100px;
+  margin: 0;
+  list-style-type: none;
+}
+select#menu-navi {
+  /* hide by default */
+  display: none;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+
+  background: url('/files/arrow_down.png') no-repeat right #303030;
+  background-origin: content-box;
+  border: none;
+  color: #fff;
+  outline: none;
+}
+
+/* on small screens...
+ *  + turn sidebar into topbar
+ *  + revert positioning of the navbar (fixed->relative)
+ *  + hide list navigation (display: (implicit) block->none)
+ *  + show menu navigation (display: none->block)
+ */
+@media (max-width: 800px) {
+  main {
+    margin: 0;
+  }
+  div#navi {
+    position: relative;
+    width: 100%;
+  }
+  ul#list-navi {
+    display: none;
+  }
+  select#menu-navi {
+    display: block;
+  }
+}
+
+/* list items */
+ul#list-navi li {
+  display: block;
+  height: 0;
+  margin: 0;
+  color: #fff;
+  opacity: 0;
+  font-size: 1em;
+  line-height: 2em;
+  text-align: center;
+  transition: all 0.4s ease-out;
+}
+ul#list-navi li a {
+  display: none;
+  color: #fff;
+  text-decoration: none;
+}
+ul#list-navi li a:focus {
+  outline: none;
+  text-decoration: underline solid #fff;
+  text-decoration-thickness: 0.3em;
+  text-underline-offset: 0.3em;
+}
+
+/* when `shown` class is attached...
+ *  + transition in the list items (height 0->2em, opacity 0->1, margin-bottom 0->.5em)
+ *  + show text immediately (display none->block)
+ */
+ul#list-navi li.shown {
+  height: 2em;
+  margin: 0 0 0.5em 0;
+  opacity: 1;
+}
+ul#list-navi li.shown a {
+  display: block;
+}
+
+/* on hover, list items light up (color #303030->#444) */
+ul#list-navi li.shown:hover {
+  background-color: #444;
+}
+
+/* for trigger items, draw an arrow beside the text */
+ul#list-navi li.shown.trigger {
+  padding: 0 1em 0 0;
+  background: url('/files/arrow_down.png') no-repeat right;
+  background-origin: content-box;
+  text-decoration: underline;
+}
+ul#list-navi li.shown.trigger:focus {
+  outline: none;
+  text-decoration: underline solid #fff;
+  text-decoration-thickness: 0.3em;
+  text-underline-offset: 0.3em;
+}
+ul#list-navi li.shown.trigger.selection {
+  padding: 0 1em 0 0;
+  background: url('/files/arrow_up.png') no-repeat right #444;
+  background-origin: content-box;
+}
+
+/* menu items */
+select#menu-navi:focus {
+  padding: 0 0.5em 0 0;
+
+  background: url('/files/arrow_up.png') no-repeat right #000;
+  background-origin: content-box;
+}
+select#menu-navi option {
+  height: 2em;
+  margin: 0;
+  width: 12em;
+}

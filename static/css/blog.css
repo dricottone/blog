@@ -56,4 +56,7 @@ div#toc ul {
 div#toc li {
   margin: 0.5em 0 0 0;
 }
+div#toc a, div#toc a:visited {
+  color: #000;
+}
 
