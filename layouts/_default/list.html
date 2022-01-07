@@ -1,18 +1,18 @@
 {{ define "main" }}
 <!-- content/<collection>/_index.md -->
 <article>
-  {{.Content}}
+  {{ .Content }}
 </article>
 
 <ul id="list-posts">
   <!-- content/<collection>/*.md -->
   {{ range .Pages }}
   <li>
-    <h2><a href="{{.Permalink}}">{{.Title}}</a></h2>
+    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
     <div class="post">
-      <p><i>posted on {{.Date.Format "2006-01-02"}}</i></p> <!-- see https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference -->
-      <p>{{.Summary}}</p>
-      {{ if .Truncated }} <p><a href="{{.Permalink}}">Read More…</a></p> {{ end }}
+      <p><i>posted on {{ .Date.Format "2006-01-02" }}</i></p> <!-- see https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference -->
+      <p>{{ .Summary }}</p>
+      {{ if .Truncated }} <p><a href="{{ .Permalink }}">Read More…</a></p> {{ end }}
     </div>
   </li>
   {{ end }}

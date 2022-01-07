@@ -2,12 +2,12 @@
 {{ if (.Params.toc) }}
 <div id="toc">
   <h2>Table of Contents</h2>
-  {{.TableOfContents}}
+  {{ .TableOfContents }}
 </div>
 {{ end }}
 
 <article>
   <!-- content/<collection>/*.md -->
-  {{.Content}}
+  {{ .Content }}
 </article>
 {{ end }}
