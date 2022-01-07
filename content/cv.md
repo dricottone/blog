@@ -1,4 +1,3 @@
-
 ---
 title: Dominic Ricottone
 site_title: true
@@ -16,13 +15,15 @@ Three years experience in survey research operations. Training in econometric an
 ------
 
 
-Employment
-=====
+## Employment
 
-## Fors Marsh Group
+
+### Fors Marsh Group
+
 *A market research company primarily working federal contracts. A majority of the time, I'm working with the Department of Defense (ex. JAMRS' Youth Poll survey) and Department of Commerce (ex. NIST's Manufacturing Extension Partnership survey). I hold a Common Access Card (CAC) in service of my military contracts.*
 
- + ### Data Management Analyst
+ + #### Data Management Analyst
+
    *February 2019 to present*
 
    + Cleaning and processing large (1M+) sample files, including international addresses
@@ -31,15 +32,18 @@ Employment
    + Managing protection of Personally Identifiable Information (PII) and Protected Health Information (PHI)
 
 
-## The Harris Poll
+### The Harris Poll
+
 *Market research company specializing in brand evaluation and concept testing. A decades-old firm entering into public polling and political reporting in collaboration with Harvard CAPS and Yahoo News.*
 
- + ### Junior Survey Programmer
+ + #### Junior Survey Programmer
+
    *November 2018 to February 2019*
 
    + Programming web surveys with the Decipher platform
 
- + ### Data Processing Programmer
+ + #### Data Processing Programmer
+
    *September 2017 to November 2018*
 
    + Validating web survey instruments and data with SPSS and Quantum
@@ -48,10 +52,12 @@ Employment
    + Maintaining production software and Linux servers
 
 
-## Chris Harris & Associates
+### Chris Harris & Associates
+
 *Political consultancy firm working with Democratic officials across Western New York. Specialties in campaign finance law and fundraising strategy.*
 
- + ### Campaign Finance Intern
+ + #### Campaign Finance Intern
+
    *August 2017 to September 2017*
 
    + Aggregating data from internal operations and external databases into actionable samples
@@ -59,10 +65,12 @@ Employment
    + Organizing fundraisers for elected officials including Monroe and Erie County Democratic Committee Chairs, Monroe County Sheriff Todd Baxter, and the late Congresswoman Louise Slaughter
 
 
-## University of Rochester
+### University of Rochester
+
 *Research university established in 1850. The largest single employer in the Rochester area. I worked under the Record Verification and Workers' Compensation teams.*
 
- + ### Human Resources Office Assistant
+ + #### Human Resources Office Assistant
+
    *May 2016 to May 2017*
 
    + Maintaining primary copies of all employment records
@@ -70,10 +78,12 @@ Employment
    + Administering multiple modernization and digitization projects
 
 
-## Cancer Care of Western New York
+### Cancer Care of Western New York
+
 *Cancer treatment facility based in Buffalo. I worked with Dr. Roehmholdt as he explored publishing a case report on penile melanoma.*
 
- + ### Research Assistant
+ + #### Research Assistant
+
    *May 2013 to August 2013*
 
    + Researching the academic literature on penile melanoma
@@ -84,11 +94,12 @@ Employment
 ------
 
 
-Education
-=====
+## Education
 
-## University of Rochester
- + ### B.A. Political Science, Economics
+### University of Rochester
+
+ + #### B.A. Political Science, Economics
+
    *August 2013 to May 2017*
 
    + Overall GPA of 3.43
@@ -97,8 +108,10 @@ Education
      + Mathematical modeling (Econometrics, Game Theory)
      + Interaction of government and the private sector (Public Finance, Political Economy, Health Economics, Economics of Globalization)
 
-## 南山大学 (Nanzan University)
- + ### Intensive Japanese Language Studies Program
+### 南山大学 (Nanzan University)
+
+ + #### Intensive Japanese Language Studies Program
+
    *January 2016 to May 2016*
 
    + Intensive study of the Japanese language in a Japanese university
