@@ -1,28 +1,21 @@
-
 <!doctype html>
 <html lang="en">
-  {{ partial "head.html" . }}
-  <body>
-
-    <div id="navi">
-      {{ partial "navi.html" . }}
+{{ partial "head.html" . }}
+<body>
+  <div id="navi">
+    {{ partial "navi.html" . }}
+  </div>
+  <main>
+    <table id="header">
+      <tbody>
+        <tr><td class="main">Dominic Ricottone</td></tr>
+        <tr><td class="sub">Personal Blog and CV</td></tr>
+      </tbody>
+    </table>
+    <div id="content">
+      {{ block "main" . }}{{ end }}
     </div>
-
-    <main>
-
-      <table id="header">
-        <tbody>
-          <tr><td class="main">Dominic Ricottone</td></tr>
-          <tr><td class="sub">Personal Blog and CV</td></tr>
-        </tbody>
-      </table>
-
-      <div id="content">
-        {{ block "main" . }}{{ end }}
-      </div>
-
-    </main>
-
-  </body>
+  </main>
+</body>
 </html>
 
