@@ -41,7 +41,7 @@ $(document).ready(function() {
     let all_classes = this.className.split(/\s+/);
     let classes = all_classes.filter(c => c.startsWith("target-"));
     for (let c = 0; c < classes.length; c++) {
-      var target = "." + classes[c].split(/\-/)[1];
+      let target = "." + classes[c].split(/\-/)[1];
       $(target).toggleClass("shown");
     }
   });
