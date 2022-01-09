@@ -1,342 +1,226 @@
+/* Common classes and main content organization */
 div#cgit {
-	padding: 0em;
-	margin: 0 0 0 calc(100px + 1em);
-	font-family: sans-serif;
-	font-size: 10pt;
-	color: #333;
-	background: white;
-	padding: 4px;
+  padding: 0em;
+  margin: 0 0 0 calc(100px + 1em);
+  font-family: sans-serif;
+  font-size: 10pt;
+  color: #333;
+  background: white;
+  padding: 4px;
 }
 @media (max-width: 800px) {
-	div#cgit {
-		margin: 0;
-	}
+  div#cgit {
+    margin: 0;
+  }
 }
 
-div#cgit a {
-	color: blue;
-	text-decoration: none;
+div#cgit .left {
+  text-align: left;
+}
+div#cgit .right {
+  text-align: right;
+}
+div#cgit table.nowrap td {
+  white-space: nowrap;
 }
 
-div#cgit a:hover {
-	text-decoration: underline;
-}
 
+/* Tables
+ *  + cgit uses table elements to render most, if not all, content
+ *     + the `header` id is set on the page header
+ *     + the `tabs` class is set on the navigation bar
+ *     + the `list` class is set to all content tables
+ *  + To simplify logic, I am moving all CSS for `list` tables up and
+ *    stripping the `list` class selectors
+ *  + I have adopted the cgit header into my other web pages, and therefore
+ *    moved all relevent CSS into my common stylesheet
+ */
 div#cgit table {
-	border-collapse: collapse;
-}
-
-div#cgit table#header {
-	width: 100%;
-	margin-bottom: 1em;
-}
-
-div#cgit table#header td.logo {
-	width: 96px;
-	vertical-align: top;
-}
-
-div#cgit table#header td.main {
-	font-size: 250%;
-	padding-left: 10px;
-	white-space: nowrap;
-}
-
-div#cgit table#header td.main a {
-	color: #000;
-}
-
-div#cgit table#header td.form {
-	text-align: right;
-	vertical-align: bottom;
-	padding-right: 1em;
-	padding-bottom: 2px;
-	white-space: nowrap;
-}
-
-div#cgit table#header td.form form,
-div#cgit table#header td.form input,
-div#cgit table#header td.form select {
-	font-size: 90%;
-}
-
-div#cgit table#header td.sub {
-	color: #777;
-	border-top: solid 1px #ccc;
-	padding-left: 10px;
-}
-
-div#cgit table.tabs {
-	border-bottom: solid 3px #ccc;
-	border-collapse: collapse;
-	margin-top: 2em;
-	margin-bottom: 0px;
-	width: 100%;
-}
-
-div#cgit table.tabs td {
-	padding: 0px 1em;
-	vertical-align: bottom;
-}
-
-div#cgit table.tabs td a {
-	padding: 2px 0.75em;
-	color: #777;
-	font-size: 110%;
-}
-
-div#cgit table.tabs td a.active {
-	color: #000;
-	background-color: #ccc;
-}
-
-div#cgit table.tabs a[href^="http://"]:after, div#cgit table.tabs a[href^="https://"]:after {
-	content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAQAAAAnOwc2AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQfgAhcJDQY+gm2TAAAAHWlUWHRDb21tZW50AAAAAABDcmVhdGVkIHdpdGggR0lNUGQuZQcAAABbSURBVAhbY2BABs4MU4CwhYHBh2Erww4wrGFQZHjI8B8IgUIscJWyDHcggltQhI4zGDCcRwhChPggHIggP1QoAVmQkSETrGoHsiAEsACtBYN0oDAMbgU6EBcAAL2eHUt4XUU4AAAAAElFTkSuQmCC);
-	opacity: 0.5;
-	margin: 0 0 0 5px;
-}
-
-div#cgit table.tabs td.form {
-	text-align: right;
-}
-
-div#cgit table.tabs td.form form {
-	padding-bottom: 2px;
-	font-size: 90%;
-	white-space: nowrap;
-}
-
-div#cgit table.tabs td.form input,
-div#cgit table.tabs td.form select {
-	font-size: 90%;
-}
-
-div#cgit div.path {
-	margin: 0px;
-	padding: 5px 2em 2px 2em;
-	color: #000;
-	background-color: #eee;
-}
-
-div#cgit div.content {
-	margin: 0px;
-	padding: 2em;
-	border-bottom: solid 3px #ccc;
-}
-
-
-div#cgit table.list {
 	width: 100%;
 	border: none;
 	border-collapse: separate;
 	border-spacing: 0;
 }
 
-div#cgit table.list tr {
-	background: white;
+/* Note: As a *very* hacky work-around:
+ * In order to pad table rows, add padding to the cells *except* the first one
+ */
+div#cgit table td {
+  padding: 0.5rem 1rem;
+}
+div#cgit table td:first-child {
+  padding: 0 1rem 0 0;
+}
+div#cgit table th {
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+}
+div#cgit table th:first-child {
+  padding: 0 1rem 0 0;
 }
 
-div#cgit table.list tr.logheader {
-	background: #eee;
+div#cgit table td a {
+  color: #000;
+  text-decoration: none;
+}
+div#cgit table td a:hover {
+  color: #00f;
 }
 
-div#cgit table.list tr:hover {
-	background: #eee;
+
+/* Index page
+ *  + the `reposection` class is set on Section rows
+ *  + the `sublevel-repo` class is set on repository rows under a Section
+ */
+div#cgit table td.reposection {
+	font-style: italic;
+	color: #888;
 }
 
-div#cgit table.list tr.nohover {
-	background: white;
+div#cgit table td.sublevel-repo {
+	padding-left: 1.5em;
 }
 
-div#cgit table.list tr.nohover:hover {
-	background: white;
+div#cgit span.age-mins {
+  font-weight: bold;
+  color: #080;
 }
 
-div#cgit table.list th {
-	font-weight: bold;
-	padding: 0.1em 0.5em 0.05em 0.5em;
-	vertical-align: baseline;
+div#cgit span.age-hours {
+  color: #080;
 }
 
-div#cgit table.list td {
-	border: none;
+div#cgit span.age-days {
+  color: #040;
 }
 
-div#cgit table.list td.commitgraph {
+div#cgit span.age-weeks {
+  color: #444;
+}
+
+div#cgit span.age-months {
+  color: #888;
+}
+
+div#cgit span.age-years {
+  color: #bbb;
+}
+
+
+/* Decorations
+ *  + cgit renders small colored boxes for
+ *    + tags (yellow)
+ *    + branches (green)
+ *    + HEAD (red)
+ */
+div#cgit .decoration a {
+  display: inline; /* enforce inline incase I set other links to render as blocks */
+  padding: 0 0.5rem;
+  margin: 0 0.5rem;
+}
+
+div#cgit a.branch-deco {
+  color: #000;
+  background-color: #88ff88;
+  border: solid 1px #007700;
+}
+
+div#cgit a.tag-deco {
+  color: #000;
+  background-color: #ffff88;
+  border: solid 1px #777700;
+}
+
+div#cgit a.remote-deco {
+  color: #000;
+  background-color: #ccccff;
+  border: solid 1px #000077;
+}
+
+div#cgit a.deco {
+  color: #000;
+  background-color: #ff8888;
+  border: solid 1px #770000;
+}
+
+
+/* Navigation bar */
+div#cgit table.tabs {
+  border-bottom: solid 2px #808080;
+}
+
+div#cgit table.tabs td {
+  padding: 0.5rem 0 0.5rem 1rem;
+  vertical-align: bottom;
+}
+
+div#cgit table.tabs td a {
+  padding: 0 1rem;
+  color: #808080;
+}
+
+div#cgit table.tabs td a.active {
+  color: #fff;
+  background-color: #303030;
+}
+
+div#cgit table.tabs td.form form {
+  white-space: nowrap; /* do not let search bar wrap lines */
+}
+
+
+/* Log page */
+div#cgit span.insertions {
+	color: #080;
+}
+
+div#cgit span.deletions {
+	color: #800;
+}
+
+
+/* Tree page
+ */
+div#cgit div.path {
+  margin: 0px;
+  padding: 0.5rem 0 0.5rem 2rem; /* need right padding to align wth navigation bar */
+  color: #000;
+  font-family: monospace;
+  background-color: #eee;
+}
+
+/*
+div#cgit .ls-blob,
+div#cgit .ls-dir {
 	font-family: monospace;
-	white-space: pre;
 }
+*/
 
-div#cgit table.list td.commitgraph .column1 {
-	color: #a00;
-}
-
-div#cgit table.list td.commitgraph .column2 {
-	color: #0a0;
-}
-
-div#cgit table.list td.commitgraph .column3 {
-	color: #aa0;
-}
-
-div#cgit table.list td.commitgraph .column4 {
-	color: #00a;
-}
-
-div#cgit table.list td.commitgraph .column5 {
-	color: #a0a;
-}
-
-div#cgit table.list td.commitgraph .column6 {
-	color: #0aa;
-}
-
-div#cgit table.list td.logsubject {
-	font-family: monospace;
-	font-weight: bold;
-}
-
-div#cgit table.list td.logmsg {
-	font-family: monospace;
-	white-space: pre;
-	padding: 0 0.5em;
-}
-
-div#cgit table.list td a {
-	color: black;
-	display: block;
-	text-decoration: none;
-	padding: 1em 0;
-}
-
-/* Collapse spacing around all of these 'decorative' links that appear in tables and lists */
-div#cgit table.list td a.tag-deco {
-	display: inline-block;
-	padding: 0;
-}
-div#cgit table.list td a.branch-deco {
-	display: inline-block;
-	padding: 0;
-}
-div#cgit table.list td a.remote-deco {
-	display: inline-block;
-	padding: 0;
-}
-div#cgit table.list td a.deco {
-	display: inline-block;
-	padding: 0;
-}
-div#cgit table.list td a.button {
-	display: inline;
-	padding: 0 1em;
-}
-
-div#cgit table.list td a.ls-dir {
-	font-weight: bold;
-	color: #00f;
-}
-
-div#cgit table.list td a:hover {
-	color: #00f;
-}
-
-div#cgit img {
-	border: none;
-}
-
-div#cgit input#switch-btn {
-	margin: 2px 0px 0px 0px;
-}
-
-div#cgit td#sidebar input.txt {
-	width: 100%;
-	margin: 2px 0px 0px 0px;
-}
-
-div#cgit table#grid {
-	margin: 0px;
-}
-
-div#cgit td#content {
-	vertical-align: top;
-	padding: 1em 2em 1em 1em;
-	border: none;
-}
-
-div#cgit div#summary {
-	vertical-align: top;
-	margin-bottom: 1em;
-}
-
-div#cgit table#downloads {
-	float: right;
-	border-collapse: collapse;
-	border: solid 1px #777;
-	margin-left: 0.5em;
-	margin-bottom: 0.5em;
-}
-
-div#cgit table#downloads th {
-	background-color: #ccc;
-}
-
-div#cgit div#blob {
-	border: solid 1px black;
-}
-
-div#cgit div.error {
-	color: red;
-	font-weight: bold;
-	margin: 1em 2em;
-}
-
-div#cgit a.ls-blob, div#cgit a.ls-dir, div#cgit .ls-mod {
-	font-family: monospace;
+div#cgit td.ls-mode {
+  width: 10rem;
+  font-family: monospace;
 }
 
 div#cgit td.ls-size {
-	text-align: right;
-	font-family: monospace;
-	width: 10em;
-}
-
-div#cgit td.ls-mode {
-	font-family: monospace;
-	width: 10em;
-}
-
-div#cgit table.blob {
-	margin-top: 0.5em;
-	border-top: solid 1px black;
+  width: 10rem;
+  text-align: right;
 }
 
 div#cgit table.blob td.lines {
-	margin: 0; padding: 0 0 0 0.5em;
-	vertical-align: top;
-	color: black;
+  padding: 0 0 0 0.5rem;
+  color: #000;
 }
 
 div#cgit table.blob td.linenumbers {
-	margin: 0; padding: 0 0.5em 0 0.5em;
-	vertical-align: top;
-	text-align: right;
-	border-right: 1px solid gray;
+  padding: 0 0.5rem 0 0;
+  text-align: right;
+  vertical-align: top;
+  background: #eee;
+  /* border-right: 1px solid #303030; */
 }
 
 div#cgit table.blob pre {
 	padding: 0; margin: 0;
-}
-
-div#cgit table.blob td.linenumbers a,
-div#cgit table.ssdiff td.lineno a {
-	color: gray;
-	text-align: right;
-	text-decoration: none;
-}
-
-div#cgit table.blob td.linenumbers a:hover,
-div#cgit table.ssdiff td.lineno a:hover {
-	color: black;
 }
 
 div#cgit table.bin-blob {
@@ -358,111 +242,84 @@ div#cgit table.bin-blob td {
 	padding: 0em 1em;
 }
 
-div#cgit table.nowrap td {
-	white-space: nowrap;
-}
+
+/* Commit page
+ *  + decorations need to be made slightly smaller
+ *  + tables with the `commit-info` class hold metadata about a commit, and are
+ *    rendered as a vertical table (i.e. columns instead of rows)
+ *     + table "headers" should not be bolded and should float to top-left
+ *     + table should reflow with page, so spacing to the right needs to be
+ *       added with padding
+ *  + to render commit messages and SHA1 hashes as intended, need to apply both
+ *    monospaced font and `white-space: pre`
+ */
 
 div#cgit table.commit-info {
-	border-collapse: collapse;
-	margin-top: 1.5em;
-}
-
-div#cgit div.cgit-panel {
-	float: right;
-	margin-top: 1.5em;
-}
-
-div#cgit div.cgit-panel table {
-	border-collapse: collapse;
-	border: solid 1px #aaa;
-	background-color: #eee;
-}
-
-div#cgit div.cgit-panel th {
-	text-align: center;
-}
-
-div#cgit div.cgit-panel td {
-	padding: 0.25em 0.5em;
-}
-
-div#cgit div.cgit-panel td.label {
-	padding-right: 0.5em;
-}
-
-div#cgit div.cgit-panel td.ctrl {
-	padding-left: 0.5em;
+  width: auto;
+  padding: 0.5rem 0 0 0;
 }
 
 div#cgit table.commit-info th {
-	text-align: left;
-	font-weight: normal;
-	padding: 0.1em 1em 0.1em 0.1em;
-	vertical-align: top;
+  font-weight: normal;
+  padding: 0 1rem 0 0;
+  text-align: left;
+  vertical-align: top;
 }
 
 div#cgit table.commit-info td {
-	font-weight: normal;
-	padding: 0.1em 1em 0.1em 0.1em;
+  padding: 0 1rem 0 0;
 }
 
 div#cgit div.commit-subject {
-	font-weight: bold;
-	font-size: 125%;
-	margin: 1.5em 0em 0.5em 0em;
-	padding: 0em;
+  font-weight: bold;
+  margin: 1rem 0 0 0;
 }
 
-div#cgit div.commit-msg {
-	white-space: pre;
-	font-family: monospace;
+div#cgit div.commit-msg,
+div#cgit .sha1 {
+  white-space: pre;
+  font-family: monospace;
 }
 
-div#cgit div.notes-header {
-	font-weight: bold;
-	padding-top: 1.5em;
+
+/* Diff page, mode selector */
+div#cgit div.cgit-panel {
+  float: right;
 }
 
-div#cgit div.notes {
-	white-space: pre;
-	font-family: monospace;
-	border: solid 1px #ee9;
-	background-color: #ffd;
-	padding: 0.3em 2em 0.3em 1em;
-	float: left;
+div#cgit div.cgit-panel table {
+  background-color: #eee;
 }
 
-div#cgit div.notes-footer {
-	clear: left;
+div#cgit div.cgit-panel td {
+  padding: 0 0 0.5rem 0.5rem;
 }
 
+
+/* Diff page, statistics */
 div#cgit div.diffstat-header {
-	font-weight: bold;
-	padding-top: 1.5em;
+  font-weight: bold;
+  padding: 0.5rem 0;
 }
 
 div#cgit table.diffstat {
-	border-collapse: collapse;
-	border: solid 1px #aaa;
-	background-color: #eee;
-}
-
-div#cgit table.diffstat th {
-	font-weight: normal;
-	text-align: left;
-	text-decoration: underline;
-	padding: 0.1em 1em 0.1em 0.1em;
-	font-size: 100%;
-}
-
-div#cgit table.diffstat td {
-	padding: 0.2em 0.2em 0.1em 0.1em;
-	font-size: 100%;
-	border: none;
+  width: auto;
 }
 
 div#cgit table.diffstat td.mode {
-	white-space: nowrap;
+  white-space: nowrap;
+  font-family: monospace;
+}
+
+div#cgit table.diffstat td.upd {
+  padding: 0 1rem;
+  font-family: monospace;
+}
+
+div#cgit table.diffstat td {
+}
+
+div#cgit table.diffstat td.mode {
 }
 
 div#cgit table.diffstat td span.modechange {
@@ -510,360 +367,151 @@ div#cgit div.diffstat-summary {
 	padding-top: 0.5em;
 }
 
+
+/* Diff page, 'unified' mode
+ *  + to render diffs correctly, need to apply both monospaced font and
+ *  `white-space: pre`
+ *  + `head` class is added to diff metadata
+ *  + `hunk` class is added to diff context
+ *  + `add` class is added to inserted content
+ *  + `del` class is added to removed content
+ */
 div#cgit table.diff {
-	width: 100%;
+  margin: 1rem 0 0 0;
 }
 
 div#cgit table.diff td {
-	font-family: monospace;
-	white-space: pre;
+  font-family: monospace;
+  white-space: pre;
 }
 
 div#cgit table.diff td div.head {
-	font-weight: bold;
-	margin-top: 1em;
-	color: black;
+  font-weight: bold;
+  color: #000;
 }
 
 div#cgit table.diff td div.hunk {
-	color: #009;
+  color: #009;
 }
 
 div#cgit table.diff td div.add {
-	color: green;
+  color: green;
 }
 
 div#cgit table.diff td div.del {
-	color: red;
+  color: red;
 }
 
-div#cgit .sha1 {
-	font-family: monospace;
-	font-size: 90%;
-}
-
-div#cgit .left {
-	text-align: left;
-}
-
-div#cgit .right {
-	text-align: right;
-}
-
-div#cgit table.list td.reposection {
-	font-style: italic;
-	color: #888;
-}
-
-div#cgit a.button {
-	font-size: 80%;
-	padding: 0em 0.5em;
-}
-
-div#cgit a.primary {
-	font-size: 100%;
-}
-
-div#cgit a.secondary {
-	font-size: 90%;
-}
-
-div#cgit td.toplevel-repo {
-
-}
-
-div#cgit table.list td.sublevel-repo {
-	padding-left: 1.5em;
-}
-
-div#cgit ul.pager {
-	list-style-type: none;
-	text-align: center;
-	margin: 1em 0em 0em 0em;
-	padding: 0;
-}
-
-div#cgit ul.pager li {
-	display: inline-block;
-	margin: 0.25em 0.5em;
-}
-
-div#cgit ul.pager a {
-	color: #777;
-}
-
-div#cgit ul.pager .current {
-	font-weight: bold;
-}
-
-div#cgit span.age-mins {
-	font-weight: bold;
-	color: #080;
-}
-
-div#cgit span.age-hours {
-	color: #080;
-}
-
-div#cgit span.age-days {
-	color: #040;
-}
-
-div#cgit span.age-weeks {
-	color: #444;
-}
-
-div#cgit span.age-months {
-	color: #888;
-}
-
-div#cgit span.age-years {
-	color: #bbb;
-}
-
-div#cgit span.insertions {
-	color: #080;
-}
-
-div#cgit span.deletions {
-	color: #800;
-}
-
-div#cgit div.footer {
-	margin-top: 0.5em;
-	text-align: center;
-	font-size: 80%;
-	color: #ccc;
-}
-
-div#cgit div.footer a {
-	color: #ccc;
-	text-decoration: none;
-}
-
-div#cgit div.footer a:hover {
-	text-decoration: underline;
-}
-
-div#cgit a.branch-deco {
-	display: inline-block;
-	color: #000;
-	margin: 0px 0.5em;
-	padding: 0px 0.25em;
-	background-color: #88ff88;
-	border: solid 1px #007700;
-}
-
-div#cgit a.tag-deco {
-	display: inline-block;
-	color: #000;
-	margin: 0px 0.5em;
-	padding: 0px 0.25em;
-	background-color: #ffff88;
-	border: solid 1px #777700;
-}
-
-div#cgit a.remote-deco {
-	display: inline-block;
-	color: #000;
-	margin: 0px 0.5em;
-	padding: 0px 0.25em;
-	background-color: #ccccff;
-	border: solid 1px #000077;
-}
-
-div#cgit a.deco {
-	display: inline-block;
-	color: #000;
-	margin: 0px 0.5em;
-	padding: 0px 0.25em;
-	background-color: #ff8888;
-	border: solid 1px #770000;
-}
-
-div#cgit div.commit-subject a.branch-deco,
-div#cgit div.commit-subject a.tag-deco,
-div#cgit div.commit-subject a.remote-deco,
-div#cgit div.commit-subject a.deco {
-	margin-left: 1em;
-	font-size: 75%;
-}
-
-div#cgit table.stats {
-	border: solid 1px black;
-	border-collapse: collapse;
-}
-
-div#cgit table.stats th {
-	text-align: left;
-	padding: 1px 0.5em;
-	background-color: #eee;
-	border: solid 1px black;
-}
-
-div#cgit table.stats td {
-	text-align: right;
-	padding: 1px 0.5em;
-	border: solid 1px black;
-}
-
-div#cgit table.stats td.total {
-	font-weight: bold;
-	text-align: left;
-}
-
-div#cgit table.stats td.sum {
-	color: #c00;
-	font-weight: bold;
-/*	background-color: #eee; */
-}
-
-div#cgit table.stats td.left {
-	text-align: left;
-}
-
-div#cgit table.vgraph {
-	border-collapse: separate;
-	border: solid 1px black;
-	height: 200px;
-}
-
-div#cgit table.vgraph th {
-	background-color: #eee;
-	font-weight: bold;
-	border: solid 1px white;
-	padding: 1px 0.5em;
-}
-
-div#cgit table.vgraph td {
-	vertical-align: bottom;
-	padding: 0px 10px;
-}
-
-div#cgit table.vgraph div.bar {
-	background-color: #eee;
-}
-
-div#cgit table.hgraph {
-	border: solid 1px black;
-	width: 800px;
-}
-
-div#cgit table.hgraph th {
-	background-color: #eee;
-	font-weight: bold;
-	border: solid 1px black;
-	padding: 1px 0.5em;
-}
-
-div#cgit table.hgraph td {
-	vertical-align: middle;
-	padding: 2px 2px;
-}
-
-div#cgit table.hgraph div.bar {
-	background-color: #eee;
-	height: 1em;
-}
-
-div#cgit table.ssdiff {
-	width: 100%;
-}
-
+/* Diff page, ssdiff mode
+ *  + to render diffs correctly, need to apply both monospaced font and
+ *  `white-space: pre`
+ *  + `head` class is added to diff metadata, and should be bolded
+ *  + `hunk` class is added to context, and should have top and bottom borders
+ *  + `add` class is added to inserted content on the right-hand side, while
+ *    `add-dark` is added to inserted content on the left-hand side
+ *  + `del` class is added to removed content
+ *  + line numbers (class `lineno`) need to be float to the top-right and
+ *    darken on hover
+ */
 div#cgit table.ssdiff td {
-	font-size: 75%;
-	font-family: monospace;
-	white-space: pre;
-	padding: 1px 4px 1px 4px;
-	border-left: solid 1px #aaa;
-	border-right: solid 1px #aaa;
+  font-family: monospace;
+  white-space: pre;
+  padding: 0; /* reset to no padding */
 }
 
-div#cgit table.ssdiff td.add {
-	color: black;
-	background: #cfc;
-	min-width: 50%;
-}
-
-div#cgit table.ssdiff td.add_dark {
-	color: black;
-	background: #aca;
-	min-width: 50%;
-}
-
-div#cgit table.ssdiff span.add {
-	background: #cfc;
-	font-weight: bold;
-}
-
-div#cgit table.ssdiff td.del {
-	color: black;
-	background: #fcc;
-	min-width: 50%;
-}
-
-div#cgit table.ssdiff td.del_dark {
-	color: black;
-	background: #caa;
-	min-width: 50%;
-}
-
-div#cgit table.ssdiff span.del {
-	background: #fcc;
-	font-weight: bold;
-}
-
+div#cgit table.ssdiff td.add,
+div#cgit table.ssdiff td.add_dark,
+div#cgit table.ssdiff td.del,
+div#cgit table.ssdiff td.del_dark,
 div#cgit table.ssdiff td.changed {
-	color: black;
-	background: #ffc;
-	min-width: 50%;
+  min-width: 50%;
 }
 
-div#cgit table.ssdiff td.changed_dark {
-	color: black;
-	background: #cca;
-	min-width: 50%;
+div#cgit table.ssdiff .add {
+  color: #000;
+  background: #cfc;
+}
+div#cgit table.ssdiff .add_dark {
+  color: #000;
+  background: #aca;
+}
+div#cgit table.ssdiff .del {
+  color: #000;
+  background: #fcc;
+}
+div#cgit table.ssdiff .del_dark {
+  color: #000;
+  background: #caa;
+}
+div#cgit table.ssdiff .changed {
+  color: #000;
+  background: #ffc;
+}
+div#cgit table.ssdiff .changed_dark {
+  color: #000;
+  background: #cca;
 }
 
 div#cgit table.ssdiff td.lineno {
-	color: black;
-	background: #eee;
-	text-align: right;
-	width: 3em;
-	min-width: 3em;
+  padding: 0 0.5rem 0 0;
+  text-align: right;
+  vertical-align: top;
+  background: #eee;
+  /* border-right: 1px solid #303030; */
+}
+div#cgit table.ssdiff td.lineno a {
+  color: #808080;
+}
+div#cgit table.ssdiff td.lineno a:hover {
+  color: #000;
 }
 
 div#cgit table.ssdiff td.hunk {
-	color: black;
-	background: #ccf;
-	border-top: solid 1px #aaa;
-	border-bottom: solid 1px #aaa;
+  color: black;
+  background: #ccf;
+  border-top: solid 1px #808080;
+  border-bottom: solid 1px #808080;
 }
 
 div#cgit table.ssdiff td.head {
-	border-top: solid 1px #aaa;
-	border-bottom: solid 1px #aaa;
+  font-weight: bold;
+  color: black;
 }
 
-div#cgit table.ssdiff td.head div.head {
-	font-weight: bold;
-	color: black;
-}
-
-div#cgit table.ssdiff td.foot {
-	border-top: solid 1px #aaa;
-	border-left: none;
-	border-right: none;
-	border-bottom: none;
-}
-
-div#cgit table.ssdiff td.space {
-	border: none;
-}
-
+/* create space between diffs */
 div#cgit table.ssdiff td.space div {
-	min-height: 3em;
+  min-height: 3rem;
 }
+
+
+/* color table rows on hover... */
+div#cgit table tr:hover {
+  background: #eee;
+}
+/* ...except for these rows */
+div#cgit table tr.nohover:hover,
+div#cgit table.diff tr:hover,
+div#cgit table.ssdiff tr:hover,
+div#cgit table.diffstat tr:hover,
+div#cgit table.blob tr:hover {
+  background: #fff;
+}
+/* ...except for these specific types of rows */
+div#cgit .ctx:hover {
+  background: #eee;
+}
+
+
+
+/* Footer */
+div#cgit div.footer {
+  text-align: center;
+  color: #808080;
+}
+div#cgit div.footer a {
+  color: #808080;
+}
+
 
 /* Style definition file generated by highlight 3.9, http://www.andre-simon.de/ */
 /* Highlighting theme: Kwrite Editor */
@@ -881,7 +529,6 @@ div#cgit table.blob .kwa { color:#000000; font-weight:bold; }
 div#cgit table.blob .kwb { color:#0057ae; }
 div#cgit table.blob .kwc { color:#000000; font-weight:bold; }
 div#cgit table.blob .kwd { color:#010181; }
-
 
 table.blob .num  { color:#2928ff; }
 table.blob .esc  { color:#ff00ff; }
@@ -912,29 +559,4 @@ pre.hl  { color:#000000; background-color:#e0eaee; font-size:10pt; font-family:'
 .hl.kwb { color:#0057ae; }
 .hl.kwc { color:#000000; font-weight:bold; }
 .hl.kwd { color:#010181; }
-
-@media (max-width: 800px) {
-  div#cgit table.list tr {
-    display: table;
-    width: 100%;
-  }
-  div#cgit table.list tr.nohover {
-    display: none;
-  }
-  div#cgit table.list td {
-    display: none;
-  }
-  div#cgit table.list td.toplevel-repo {
-    display: table-row;
-  }
-  div#cgit table.list td.reposection {
-    display: table-row;
-  }
-  div#cgit table.list td.sublevel-repo {
-    display: table-row;
-  }
-  div#cgit table.list td.sublevel-repo a {
-    padding-left: 1.5em;
-  }
-}
 
