@@ -62,6 +62,10 @@ async function decrypt(blob) {
   }
 };
 
+function escapeHTML(str) {
+  return str.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&apos;');
+};
+
 // initialize passkey to null
 var passkey;
 
@@ -76,10 +80,10 @@ function connect() {
   socket.onmessage = async (m) => {
     const el = document.createElement('li');
     if (passkey == null) {
-      el.innerHTML = m.data;
+      el.innerHTML = escapeHTML(m.data);
     } else {
       const decrypted = await decrypt(m.data);
-      el.innerHTML = decrypted;
+      el.innerHTML = escapeHTML(decrypted);
     }
     document.getElementById('chat-room').appendChild(el);
   };
