@@ -1,0 +1,22 @@
+<div class="gallery">
+  {{ $gallery_src := print (.Get "src") }}
+  {{ $local_dir := print "static/" $gallery_src }}
+  {{ range (readDir $local_dir) }}
+    {{ $web_src := print $gallery_src "/" .Name }}
+    {{ if strings.HasSuffix .Name "webm" }}
+      <video controls loop width="200">
+        <source src="{{ $web_src }}" type="video/webm">
+        <p>Video <a href="{{ $web_src }}">here</a></p>
+      </video>
+    {{ else if (strings.HasSuffix .Name "mp4") }}
+      <video controls loop width="200">
+        <source src="{{ $web_src }}" type="video/mp4">
+        <p>Video <a href="{{ $web_src }}">here</a></p>
+      </video>
+    {{ else }}
+      <a href="{{ $web_src }}" data-lightbox="{{ $gallery_src }}">
+        <img src="{{ $web_src }}" height="100" />
+      </a>
+    {{ end}}
+  {{ end }}
+</div>

@@ -1,0 +1,18 @@
+<div class="image">
+  {{ $web_src := print (.Get "src") }}
+  {{ if strings.HasSuffix $web_src "webm" }}
+    <video controls loop width="200">
+      <source src="{{ $web_src }}" type="video/webm">
+      <p>Video <a href="{{ $web_src }}">here</a></p>
+    </video>
+  {{ else if (strings.HasSuffix $web_src "mp4") }}
+    <video controls loop width="200">
+      <source src="{{ $web_src }}" type="video/mp4">
+      <p>Video <a href="{{ $web_src }}">here</a></p>
+    </video>
+  {{ else }}
+    <a href="{{ $web_src }}" data-lightbox="{{ .Page.Title }}">
+      <img src="{{ $web_src }}" height="100" />
+    </a>
+  {{ end}}
+</div>
