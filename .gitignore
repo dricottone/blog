@@ -2,4 +2,9 @@ public/
 resources/
 themes/
 .hugo_build.lock
+**/*.aux
+**/*.log
+**/*.out
+**/*.tex
+**/*.pdf
 
