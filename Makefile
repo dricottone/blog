@@ -10,9 +10,13 @@ clean:
 static/files/dominic-ricottone.pdf: content/cv.md
 	sed content/cv.md \
 		-e 's/南山大学/\\begin{CJK}{UTF8}{min}&\\end{CJK}/' \
-		| scripts/cv.awk > scripts/cv.tex
+		| scripts/cv_tex.awk > scripts/cv.tex
 	cd scripts && pdflatex cv.tex
 	mv scripts/cv.pdf static/files/dominic-ricottone.pdf
+
+static/files/dominic-ricottone.html: content/cv.md
+	cat content/cv.md \
+		| scripts/cv_html.awk > static/files/dominic-ricottone.html
 
 dev: static/files/dominic-ricottone.pdf
 	hugo server --buildDrafts --bind 127.0.0.1 --port 8080

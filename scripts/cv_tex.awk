@@ -170,7 +170,7 @@ BEGIN {
       print $0;
     }
   }
-  else if ($0 ~ /Contact:/) ignore=0;
+  else if ($0 ~ /Ignore above content for PDF and HTML versions/) ignore=0;
 }
 
 END {

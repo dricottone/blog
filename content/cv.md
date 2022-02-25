@@ -8,6 +8,8 @@ toc: true
 
 **Contact:** [me@dominic-ricottone.com](mailto:me@dominic-ricottone.com)
 
+<!-- Ignore above content for PDF and HTML versions -->
+
 Five years experience in survey research operations.
 Training in econometric analysis and quantitative methods.
 Self-trained programmer and systems administrator.
