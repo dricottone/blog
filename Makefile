@@ -18,10 +18,10 @@ static/files/dominic-ricottone.html: content/cv.md
 	cat content/cv.md \
 		| scripts/cv_html.awk > static/files/dominic-ricottone.html
 
-dev: static/files/dominic-ricottone.pdf
+dev: static/files/dominic-ricottone.pdf static/files/dominic-ricottone.html
 	hugo server --buildDrafts --bind 127.0.0.1 --port 8080
 
-build: clean static/files/dominic-ricottone.pdf
+build: clean static/files/dominic-ricottone.pdf static/files/dominic-ricottone.html
 	hugo
 
 sync: build

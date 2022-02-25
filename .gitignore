@@ -1,10 +1,15 @@
+# hugo generation artifacts
 public/
-resources/
-themes/
 .hugo_build.lock
+
+# script-generated files
+static/files/dominic-ricottone.html
+static/files/dominic-ricottone.pdf
+
+# (la|odf)?tex compilation artifacts
 **/*.aux
 **/*.log
 **/*.out
-**/*.tex
 **/*.pdf
+**/*.tex
 
