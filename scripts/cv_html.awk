@@ -49,6 +49,7 @@ BEGIN {
 
     gsub("&","\\&amp;");
     gsub("'","\\&rsquo;");
+    $0 = gensub(/\[([^\]]+)\]\(([^\)]+)\)/, "<a href=\"\\2\">\\1</a>", "g");
 
     if ($0 ~ /^## /) {
       if (in_paragraph==1) end_paragraph();

@@ -53,6 +53,8 @@ BEGIN {
   print "\\usepackage{enumitem} % exports macros for below";
   print "\\setitemize{topsep=0pt,parsep=0pt,partopsep=0pt} % compact itemize";
   print "\\usepackage{CJKutf8}";
+  print "\\usepackage{hyperref} % embedded hyperlinks";
+  print "\\urlstyle{same}";
   print "\\begin{document}";
   print "\\section*{Dominic Ricottone}";
   print "\\vspace{.05in}";
@@ -61,6 +63,7 @@ BEGIN {
   if (ignore==0) {
 
     gsub("&","\\\\&");
+    $0 = gensub(/\[([^\]]+)\]\(([^\)]+)\)/, "\\\\href{\\2}{\\1}", "g");
 
     # start of a subsection
     if ($0 ~ /^## /) {
