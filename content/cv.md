@@ -101,3 +101,30 @@ I worked with Dr. Roehmholdt to draft a case report of penile melanoma.*
    *January 2016 to May 2016*
    + Intensive study of the Japanese language in a Japanese university
 
+------
+
+## Active Certifications
+
+### SAS
+
+ + #### SAS Programming 1: Essentials
+   *November 2019*
+   + Training to write SAS programs to access, explore, prepare, and analyze data
+
+### CITI Program
+
+ + #### Biomedical Research Support Staff
+   *February 2019 to present*
+   + Training in the requirements and ethical implications of human subject research, especially in the context of the 2018 revision of the Common Rule
+   + Current certificate ID is [45797471](https://www.citiprogram.org/verify/?wbc50a742-03db-4a64-bb98-43276215e6c1-45797471)
+
+### Department of Defense Cyber Exchange
+
+ + #### Cyber Awareness Challenge
+   *April 2019*
+   + Training to mitigate threats and vulnerabilities to department information systems
+
+ + #### Identifying and Safeguarding Personally Identifiable Information
+   *April 2019*
+   + Training in the identification and safeguarding of personally identifiable information
+
