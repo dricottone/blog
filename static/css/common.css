@@ -237,3 +237,58 @@ select#menu-navi option {
   margin: 0;
   width: 12em;
 }
+
+/* Header content */
+table#header {
+  border-collapse: collapse;
+  margin-bottom: 1em;
+  width: 100%;
+}
+table#header td.main {
+  color: #000;
+  font-size: 2.5em;
+  padding: 0 0 0 10px;
+  white-space: nowrap;
+}
+table#header td.main a {
+  color: #000;
+  text-decoration: none;
+}
+table#header td.sub {
+  color: #777;
+  border-top: solid 1px #ccc;
+  font-size: 1em;
+  padding: 0 0 0 10px;
+}
+table#header td.sub a {
+  color: #777;
+}
+/* Header logos */
+table#header td.logo {
+  width: 96px;
+  vertical-align: top;
+}
+
+/* Footer */
+div#cgit div.footer,
+div#footer {
+  margin: 2em 0 0 0;
+  color: #777;
+  font-style: italic;
+}
+
+div#cgit div.footer a,
+div#footer a {
+  color: #777;
+}
+
+div#footer {
+  margin-left: calc(100px + 1em);
+}
+
+@media (max-width: 800px) {
+  div#footer {
+    margin-left: 0;
+  }
+}
+
