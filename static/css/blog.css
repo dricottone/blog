@@ -1,22 +1,26 @@
-div#content {
+div#blog-content {
   margin: 0;
   max-width: 800px;
   padding: 0 0 0 10px;
 }
-ul#list-posts {
-  list-style-type: none; /* no bullets for post lists */
+
+ul#blog-post-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+ul#blog-post-list li {
   margin: 0;
   padding: 0;
 }
-ul#list-posts li {
-  margin: 0;
-  padding: 0; /* no indentation on list item--title should not be indented */
-}
-div.post p {
+
+div.blog-post p {
   padding: 0 0 0 2em;
   text-indent: 2em;
 }
-div.post p.read-more {
+
+div.blog-post p.read-more {
   font-style: italic;
   text-indent: 0;
 }

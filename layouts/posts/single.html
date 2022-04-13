@@ -1,24 +1,28 @@
 {{ define "main" }}
-<article>
-  <h1>{{ .Title }}</h1>
-  <p><b>Date:</b> {{ .Date.Format "Mon 2006-01-02" }}</p>
-  <p><b>Permalink:</b> <a href="{{ .Permalink }}">{{ .Permalink }}</a></p>
+<div id="blog-content">
+
+  <article>
+    <h1>{{ .Title }}</h1>
+    <p><b>Date:</b> {{ .Date.Format "Mon 2006-01-02" }}</p>
+    <p><b>Permalink:</b> <a href="{{ .Permalink }}">{{ .Permalink }}</a></p>
+
+    <br />
+
+    <div class="blog-post">
+      {{ .Content }}
+    </div>
+  </article>
 
   <br />
-  <div class="post">
-    {{ .Content }}
+
+  <div>
+    {{ with .PrevInSection }}
+      <p><b>Previous article:</b> <a href="{{ .Permalink }}">{{ .Title }}</a></p>
+    {{ end }}
+    {{ with .NextInSection }}
+      <p><b>Next article:</b> <a href="{{ .Permalink }}">{{ .Title }}</a></p>
+    {{ end }}
   </div>
-</article>
 
-<br />
-<div>
-  {{ with .PrevInSection }}
-    <p><b>Previous article:</b> <a href="{{ .Permalink }}">{{ .Title }}</a></p>
-  {{ end }}
-  {{ with .NextInSection }}
-    <p><b>Next article:</b> <a href="{{ .Permalink }}">{{ .Title }}</a></p>
-  {{ end }}
 </div>
-
 {{ end }}
-

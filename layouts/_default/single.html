@@ -1,13 +1,16 @@
 {{ define "main" }}
-{{ if (.Params.toc) }}
-<div id="toc">
-  <h2>Table of Contents</h2>
-  {{ .TableOfContents }}
-</div>
-{{ end }}
+<div id="content">
 
-<article>
-  <!-- content/<collection>/*.md -->
-  {{ .Content }}
-</article>
+  {{ if (.Params.toc) }}
+  <div id="toc">
+    <h2>Table of Contents</h2>
+    {{ .TableOfContents }}
+  </div>
+  {{ end }}
+
+  <article>
+    {{ .Content }}
+  </article>
+
+</div>
 {{ end }}
