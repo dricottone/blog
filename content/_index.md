@@ -8,7 +8,7 @@ For three years he has worked at Fors Marsh Group, a data-driven company
 specializing in federal contracts. Dominic works on a variety of high-profile
 government programs such as:
 
-+ JAMRS Youth Poll
++ JAMRS Futures Survey
 + FVAP Overseas Citizens Population Survey
 + NIST Manufacturing Extension Program
 + FirstNet Economic Evaluation
