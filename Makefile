@@ -1,5 +1,5 @@
-TARGET_USER=deploy
-TARGET_HOST=deploy-aws2
+TARGET_USER=admin
+TARGET_HOST=admin-aws3
 
 .PHONY: clean dev build sync
 
@@ -27,5 +27,5 @@ build: clean static/files/dominic-ricottone.pdf static/files/dominic-ricottone.h
 sync: build
 	rsync --recursive --links --compress --delete \
 		--chown=$(TARGET_USER):$(TARGET_USER) \
-		public/ $(TARGET_HOST):/var/deploy/webroot/
+		public/ $(TARGET_HOST):/var/deploy/build/blog/public/
 
