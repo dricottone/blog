@@ -22,7 +22,7 @@ Seeking opportunities to develop analytical and visualization skills in a goal-o
 I work on several high-profile surveys that drive national policy-making,
 such as the Department of Defense's continuously-running
 [Futures Survey](https://jamrs.defense.gov/Market-Research-Studies/Reports/).
-I hold a Common Access Card (CAC) in service of my military contracts.*
+I hold a Common Access Card (CAC) in service of my Department of Defense funded contracts.*
 
  + #### Data Management Analyst
    *February 2019 to present*
