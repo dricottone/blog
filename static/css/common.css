@@ -107,172 +107,72 @@ td {
   padding: 0;
 }
 
-/* navigation by sidebar (for desktop screens) */
-main {
-  margin: 0 0 0 calc(100px + 1em);
-}
-div#navi {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 100px;
-  overflow-x: hidden;
-  /* overflow-y: scroll; */
-  background-color: #303030;
-  scrollbar-color: #808080 #303030;
-}
-ul#list-navi {
-  width: 100px;
-  margin: 0;
-  list-style-type: none;
-}
-select#menu-navi {
-  /* hide by default */
+/* navigation */
+nav button {
   display: none;
-  appearance: none;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-
-  background: url('/files/arrow_down.png') no-repeat right #303030;
-  background-origin: content-box;
-  border: none;
-  color: #fff;
-  outline: none;
 }
 
-/* on small screens...
- *  + turn sidebar into topbar
- *  + revert positioning of the navbar (fixed->relative)
- *  + hide list navigation (display: (implicit) block->none)
- *  + show menu navigation (display: none->block)
- */
-@media (max-width: 800px) {
-  main {
+nav ul#naviList {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul#naviList li a {
+  padding: 0 .5rem;
+}
+
+@media (max-width: 500px) {
+  nav {
+    padding: .5rem;
+    background-color: #f1f1f1;
+    border-radius: 1rem;
+  }
+
+  nav button {
+    display: block;
+    line-height: 100%;
+    background-color: #e1e1e1;
+    padding: 0;
+    width: 100%;
+    border: 0 none;
+    border-radius: 1rem;
+  }
+  nav button:hover, nav button:focus {
+    background-color: #d1d1d1;
+  }
+
+  nav button p {
+    display: block;
+    margin: .25rem 0;
+    padding: .25rem 0;
+  }
+
+  nav ul#naviList {
+    display: block;
     margin: 0;
   }
-  div#navi {
-    position: relative;
+
+  nav ul#naviList li {
+    background-color: #e1e1e1;
     width: 100%;
+    margin: .25rem 0;
+    padding: .25rem 0;
+    border-radius: 1rem;
   }
-  ul#list-navi {
+  nav ul#naviList.hide {
     display: none;
   }
-  select#menu-navi {
-    display: block;
+  nav ul#naviList li:hover, nav ul#naviList li:focus {
+    background-color: #d1d1d1;
   }
-}
 
-/* list items */
-ul#list-navi li {
-  display: block;
-  height: 0;
-  margin: 0;
-  color: #fff;
-  opacity: 0;
-  font-size: 1em;
-  line-height: 2em;
-  text-align: center;
-  transition: all 0.4s ease-out;
-}
-ul#list-navi li a {
-  display: none;
-  color: #fff;
-  text-decoration: none;
-}
-ul#list-navi li a:focus {
-  outline: none;
-  text-decoration: underline solid #fff;
-  text-decoration-thickness: 0.3em;
-  text-underline-offset: 0.3em;
-}
-
-/* when `shown` class is attached...
- *  + transition in the list items (height 0->2em, opacity 0->1, margin-bottom 0->.5em)
- *  + show text immediately (display none->block)
- */
-ul#list-navi li.shown {
-  height: 2em;
-  margin: 0 0 0.5em 0;
-  opacity: 1;
-}
-ul#list-navi li.shown a {
-  display: block;
-}
-
-/* on hover, list items light up (color #303030->#444) */
-ul#list-navi li.shown:hover {
-  background-color: #444;
-}
-
-/* for trigger items, draw an arrow beside the text */
-ul#list-navi li.shown.trigger {
-  padding: 0 1em 0 0;
-  background: url('/files/arrow_down.png') no-repeat right;
-  background-origin: content-box;
-  text-decoration: underline;
-}
-ul#list-navi li.shown.trigger:focus {
-  outline: none;
-  text-decoration: underline solid #fff;
-  text-decoration-thickness: 0.3em;
-  text-underline-offset: 0.3em;
-}
-ul#list-navi li.shown.trigger.selection {
-  padding: 0 1em 0 0;
-  background: url('/files/arrow_up.png') no-repeat right #444;
-  background-origin: content-box;
-}
-
-/* center horizontal rules */
-ul#list-navi hr {
-  width: 80%;
-  margin: 0 auto 0.5em auto;
-  color: #fff;
-}
-
-/* menu items */
-select#menu-navi:focus {
-  padding: 0 0.5em 0 0;
-
-  background: url('/files/arrow_up.png') no-repeat right #000;
-  background-origin: content-box;
-}
-select#menu-navi option {
-  height: 2em;
-  margin: 0;
-  width: 12em;
-}
-
-/* Header content */
-table#header {
-  border-collapse: collapse;
-  margin-bottom: 1em;
-  width: 100%;
-}
-table#header td.main {
-  color: #000;
-  font-size: 2.5em;
-  padding: 0 0 0 10px;
-  white-space: nowrap;
-}
-table#header td.main a {
-  color: #000;
-  text-decoration: none;
-}
-table#header td.sub {
-  color: #777;
-  border-top: solid 1px #ccc;
-  font-size: 1em;
-  padding: 0 0 0 10px;
-}
-table#header td.sub a {
-  color: #777;
-}
-/* Header logos */
-table#header td.logo {
-  width: 96px;
-  vertical-align: top;
+  nav ul#naviList li a {
+    display: block;
+    border-radius: 1rem;
+  }
 }
 
 /* Footer */

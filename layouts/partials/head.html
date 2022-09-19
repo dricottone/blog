@@ -25,24 +25,14 @@
   {{ if .Params.lightbox }} <script src="/js/lightbox-2.11.3.min.js"></script> {{ end }}
   <script>
 $(document).ready(function() {
-  $(".trigger").on("click keypress", function(event) {
-    if (event.type === "keypress") {
-      //jQuery's `which` normalizes `keyCode` and `charCode`
-      if (event.which !== 13) {
-        return;
-      }
+  $("nav button#navi").on("click", function(event) {
+    $("nav ul#naviList").toggleClass("hide");
+  });
+  $("nav button#navi p").on("keypress", function(event) {
+    if (event.which !== 13) {
+      return;
     }
-
-    // Add `selection` class to this element
-    $(this).toggleClass("selection");
-
-    // Add `shown` class to children elements
-    let all_classes = this.className.split(/\s+/);
-    let classes = all_classes.filter(c => c.startsWith("target-"));
-    for (let c = 0; c < classes.length; c++) {
-      let target = "." + classes[c].split(/\-/)[1];
-      $(target).toggleClass("shown");
-    }
+    $("nav ul#naviList").toggleClass("hide");
   });
 });
   </script>
