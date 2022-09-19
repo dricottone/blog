@@ -1,9 +1,0 @@
-<h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-<div class="blog-post">
-  <p><i>posted on {{ .Date.Format "2006-01-02" }}</i></p>
-  <p>{{ .Summary }}</p>
-
-  {{ if .Truncated }}
-  <p><a href="{{ .Permalink }}">Read More…</a></p>
-  {{ end }}
-</div>

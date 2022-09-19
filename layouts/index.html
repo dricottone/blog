@@ -2,26 +2,30 @@
 
 <div id="content">
   <h1>{{ .Title }}</h1>
+
   {{ .Content }}
 
   <hr />
 </div>
 
-
 <div id="blog-content">
-
   <p>These are my three most recent blog posts. More posts can be found on the 'Blog' tab.<p>
 
-  <ul id="blog-post-list">
+  <ul id="blog-list">
     {{ with .Site.GetPage "/posts" }}
-      {{ range first 3 .Pages }}
-      <li>
-      {{ partial "blog-post-listitem.html" . }}
-      </li>
-      {{ end }}
+    {{ range first 3 .Pages }}
+    <li>
+      <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+
+      <p><i>posted on {{ .Date.Format "2006-01-02" }}</i></p>
+
+      <p>{{ .Summary }}</p>
+      {{ if .Truncated }}<p><a href="{{ .Permalink }}">Read More…</a></p>{{ end }}
+    </li>
+    {{ end }}
     {{ end }}
   </ul>
-
 </div>
 
 {{ end }}
+

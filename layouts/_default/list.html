@@ -6,11 +6,9 @@
     {{ .Content }}
   </article>
 
-  <ul id="blog-post-list">
+  <ul id="blog-list">
     {{ range .Pages }}
-    <li>
-    {{ partial "blog-post-listitem.html" . }}
-    </li>
+    <li><h2><a href="{{ .Permalink }}">{{ .Date.Format "2006-01-02" }} - {{ .Title }}</a></h2></li>
     {{ end }}
   </ul>
 

@@ -4,24 +4,22 @@ div#blog-content {
   padding: 0 0 0 10px;
 }
 
-ul#blog-post-list {
+ul#blog-list {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-ul#blog-post-list li {
+ul#blog-list li {
   margin: 0;
   padding: 0;
 }
 
-div.blog-post p {
-  padding: 0 0 0 2em;
+article p {
   text-indent: 2em;
 }
 
-div.blog-post p.read-more {
-  font-style: italic;
+article p.noindent {
   text-indent: 0;
 }
 
