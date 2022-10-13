@@ -1,0 +1,10 @@
+#pubkey-shown {
+  width: 90%;
+  padding: .25em;
+  margin: 0 0 1em 0;
+  font-family: monospace;
+  background-color: #f8f9fa;
+  word-break: break-all;
+  border-radius: .5em;
+}
+

@@ -6,6 +6,7 @@ RSYNC_OPTS=--recursive --links --compress --delete --chown=$(TARGET_USER):$(TARG
 clean:
 	rm -rf public resources themes
 	rm -rf scripts/cv.aux scripts/cv.log scripts/cv.out scripts/cv.tex
+	rm -rf content/posts/*.bak
 
 static/files/dominic-ricottone.pdf: content/cv.md
 	sed content/cv.md \
@@ -25,6 +26,10 @@ dev: static/files/dominic-ricottone.pdf static/files/dominic-ricottone.html
 .PHONY: build
 build: clean static/files/dominic-ricottone.pdf static/files/dominic-ricottone.html
 	hugo
+
+.PHONY: check
+check:
+	for f in content/posts/*.md; do aspell --check $$f; done
 
 .PHONY: sync
 sync: build

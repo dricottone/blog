@@ -29,7 +29,7 @@ Strong emphasis, aka bold, with **asterisks** or __underscores__.
 
 Combined emphasis with **asterisks and _underscores_**.
 
-Strikethrough uses two tildes. ~~Scratch this.~~
+Strike-through uses two tildes. ~~Scratch this.~~
 
 
 
@@ -46,7 +46,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 
    To have a line break without a paragraph, you will need to use two trailing spaces.
    Note that this line is separate, but within the same paragraph.
-   (This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)
+   (This is contrary to the typical GFM line break behavior, where trailing spaces are not required.)
 
 * Unordered list can use asterisks
 - Or minuses
@@ -153,14 +153,14 @@ Markdown | Less | Pretty
 
 
 
-## Blockquotes
+## Block quotes
 
-> Blockquotes are very handy in email to emulate reply text.
+> Block quotes are very handy in email to emulate reply text.
 > This line is part of the same quote.
 
 Quote break.
 
-> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote.
+> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a block quote.
 
 
 

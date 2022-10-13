@@ -30,7 +30,7 @@ as I coaxed this project into a `pyproject.toml`-based system, I realized that
 Goodbye, `setup.cfg`!
 
 I'm happy with where Python packaging landed. It's a shame it took this long.
-Or maybe it didn't take *time*, just the [seccession of the packaging
+Or maybe it didn't take *time*, just the [secession of the packaging
 infrastructure team](https://peps.python.org/pep-0609/) from the rest of the
 steering council...
 
@@ -39,7 +39,7 @@ steering council...
 Another familiar story: The biggest difference between my old and new projects
 is type hints.
 
-I used to typeguard all passed-in arguments as a debugging tool.
+I used to type guard all passed-in arguments as a debugging tool.
 (If `int(myint)` fails then clearly `myint` isn't what I want it to be).
 This made re-using code a *pain in the ass* at the best of times.
 

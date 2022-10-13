@@ -4,3 +4,6 @@ title = "Dominic Ricottone"
 disableKinds = ["taxonomy", "taxonomyTerm"]
 summaryLength = 20
 
+[markup.goldmark.renderer]
+unsafe=true
+
