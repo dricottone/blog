@@ -1,7 +1,7 @@
 ---
 title: Identity
 date: 2022-10-06T10:13:32-05:00
-draft: true
+draft: false
 ---
 
 I've been thinking about adding identity verification by way of digital
