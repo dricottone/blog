@@ -10,14 +10,13 @@ toc: true
 
 <!-- Ignore above content for PDF and HTML versions -->
 
-Five years experience in survey research including data collection, cleaning, and weighting.
-Self-trained programmer with proficiencies in SPSS and Stata, and an eagerness to learn new toolsets.
-Seeking opportunities to develop analytical and visualization skills in a goal-oriented team.
+Over five years experience in survey research including data collection, cleaning, and weighting.
+I am proficient in statistical programming especially with SPSS, Stata, and Python.
 
 ------
 
 ## Employment
-### Fors Marsh Group
+### Fors Marsh
 *A market research company primarily working federal contracts.
 I work on several high-profile surveys that drive national policy-making,
 such as the Department of Defense's continuously-running
@@ -105,7 +104,7 @@ I worked with Dr. Roehmholdt to draft a case report of penile melanoma.*
 
 ## Active Certifications
 
-### SAS
+### SAS Institute
 
  + #### SAS Programming 1: Essentials
    *November 2019*
@@ -125,6 +124,7 @@ I worked with Dr. Roehmholdt to draft a case report of penile melanoma.*
    + Training to mitigate threats and vulnerabilities to department information systems
 
  + #### Identifying and Safeguarding Personally Identifiable Information
-   *April 2019*
-   + Training in the identification and safeguarding of personally identifiable information
+   *April 2019 to present*
+   + Training in data governance of personally identifiable information
+   + Current certificate verification code is HKY75X3TQT
 
