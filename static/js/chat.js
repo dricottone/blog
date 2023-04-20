@@ -192,9 +192,23 @@ function connect() {
 var socket;
 connect();
 
+// buttons
+function toggleIdentity() {
+  const identityInner = document.getElementById("identity-content");
+  identityInner.classList.toggle("hidden");
+  const identityOuter = document.getElementById("identity");
+  identityOuter.classList.toggle("resized");
+};
+function togglePassword() {
+  const passwdInner = document.getElementById("passwd-content");
+  passwdInner.classList.toggle("hidden");
+  const passwdOuter = document.getElementById("passwd");
+  passwdOuter.classList.toggle("resized");
+};
+
 document.addEventListener("DOMContentLoaded", () => {
-  // key interface
-  const pubkeyShown = document.getElementById('pubkey-shown');
+  // identity interface
+  const pubkeyShown = document.getElementById('identity-pubkey');
   initializeKeyChain(pubkeyShown);
 
   // chat interface

@@ -1,11 +1,57 @@
-#pubkey-shown {
-  width: 90%;
-  padding: .25em;
-  margin: 0 0 1em 0;
-  font-family: monospace;
+input {
+  padding: 0.5em;
+  border-radius: 1.25em;
+}
+
+button {
+  width: 6em;
+  padding: 0.5em;
+  border-radius: 1.25em;
+  border-color: #f8f9fa;
+}
+
+#identity {
+  display: inline-block;
+  margin: 0 0 0.5em 0;
+  border-radius: 1.25em;
   background-color: #f8f9fa;
+}
+
+#identity-content {
+  display: block;
+  margin: 0 0 1em 0;
+}
+
+#identity-pubkey {
+  margin: 0 0.5em 0 0.5em;
+  font-family: monospace;
+  background-color: #ffffff;
   word-break: break-all;
   border-radius: .5em;
+}
+
+#passwd {
+  display: inline-block;
+  margin: 0 0 0.5em 0;
+  border-radius: 1.25em;
+  background-color: #f8f9fa;
+}
+
+#passwd-content {
+  display: block;
+  margin: 0 0 1em 0;
+}
+
+#passwd-button {
+  width: 8em;
+}
+
+.resized {
+  display: block !important;
+}
+
+.hidden {
+  display: none !important;
 }
 
 ul#chat-room {
@@ -67,13 +113,9 @@ ul#chat-room li.own::after {
 }
 
 input#chat-input {
-  width: 88%;
-  padding: 0.5em;
-  border-radius: 1.25em;
+  width: calc(100% - 6em);
 }
 
 button#chat-button {
-  width: 9%;
-  padding: 0.5em;
-  border-radius: 1.25em;
+  width: 4em;
 }
