@@ -174,7 +174,7 @@ var socket;
 connect();
 
 document.addEventListener("DOMContentLoaded", () => {
-  //key interface
+  // key interface
   const pubkeyShown = document.getElementById('pubkey-shown');
   initializeKeyChain(pubkeyShown);
 
