@@ -3,6 +3,13 @@ const ivSize = 12;          // size for initial value array per AES GCM specific
 const iterationNum = 10000; // lowest recommendable number of iterations for password derivation
 const sigSize = 4096;       // recommended size for digital signatures
 
+// message authenticated enum
+const MessageAuthenticated = {
+  True: "True",
+  False: "False",
+  Self: "Self"
+}
+
 // conversion functions
 function arrayBufferToArray(buf) {
   return new Uint8Array(buf);
@@ -82,16 +89,20 @@ async function encryptAndSign(str) {
 };
 async function verify(sig, arr) {
   try {
-    for (let i = 0; i < keychain.length; i++) {
+    if (1 <= keychain.length) {
+      const trust = await window.crypto.subtle.verify("RSASSA-PKCS1-v1_5", keychain[0], sig, arr);
+      if (trust === true) { return "Self"; }
+    }
+    for (let i = 1; i < keychain.length; i++) {
       let trust = await window.crypto.subtle.verify("RSASSA-PKCS1-v1_5", keychain[i], sig, arr);
-      if (trust === true) { return true; }
+      if (trust === true) { return "True"; }
     }
 
     console.log("could not verify signature");
-    return false;
+    return "False";
   } catch(e) {
     console.log("verification failed")
-    return false;
+    return "False";
   }
 }
 async function decrypt(passkey, salt, iv, arr) {
@@ -109,8 +120,8 @@ async function justVerify(blob) {
   const sig = arr.slice(saltSize+ivSize, saltSize+ivSize+(sigSize/8));
   const msg = arr.slice(saltSize+ivSize+(sigSize/8));
 
-  await verify(arrayToArrayBuffer(sig), arrayToArrayBuffer(msg));
-  return arrayToString(msg);
+  const trust = await verify(arrayToArrayBuffer(sig), arrayToArrayBuffer(msg));
+  return { "trust": trust, "message": arrayToString(msg) };
 }
 async function verifyAndDecrypt(blob) {
   const arr = base64ToArray(blob);
@@ -119,8 +130,9 @@ async function verifyAndDecrypt(blob) {
   const sig = arr.slice(saltSize+ivSize, saltSize+ivSize+(sigSize/8));
   const msg = arr.slice(saltSize+ivSize+(sigSize/8));
 
-  await verify(sig, msg);
-  return await decrypt(passkey, salt, iv, msg);
+  const trust = await verify(sig, msg);
+  const message = await decrypt(passkey, salt, iv, msg);
+  return { "trust": trust, "message": message };
 }
 function escapeHTML(str) {
   return str.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&apos;');
@@ -158,13 +170,20 @@ function connect() {
 
   socket.onmessage = async (m) => {
     const el = document.createElement('li');
+
+    var verified;
     if (passkey == null) {
-      const msg = await justVerify(m.data);
-      el.innerHTML = escapeHTML(msg);
+      verified = await justVerify(m.data);
     } else {
-      const decrypted = await verifyAndDecrypt(m.data);
-      el.innerHTML = escapeHTML(decrypted);
+      verified = await verifyAndDecrypt(m.data);
     }
+
+    if (verified.trust == MessageAuthenticated.Self) {
+      el.classList.add('own');
+    }
+
+    el.innerHTML = escapeHTML(verified.message);
+
     document.getElementById('chat-room').appendChild(el);
   };
 };

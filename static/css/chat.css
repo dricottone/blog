@@ -8,3 +8,64 @@
   border-radius: .5em;
 }
 
+ul#chat-room {
+  margin: 0;
+  padding: 2em;
+}
+
+ul#chat-room li {
+  position: relative;
+  margin: 0.5em 4em 0 0;
+  padding: 0.5em;
+  border-radius: 1.25em;
+  list-style: none;
+  word-break: break-word;
+  background-color: green;
+}
+
+ul#chat-room li::before {
+  position: absolute;
+  width: 0;
+  height: 0;
+  content: '';
+  bottom: -0.75em;
+  left: -0.75em;
+  transform: rotate(90deg);
+  border-top: 1.5em solid transparent;
+  border-bottom: 1.5em solid transparent;
+  border-right: 1.5em solid green;
+}
+
+ul#chat-room li.own {
+  background-color: blue;
+  margin: 0.5em 0 0 4em;
+}
+
+ul#chat-room li.own::before {
+  display: none;
+}
+
+ul#chat-room li.own::after {
+  position: absolute;
+  width: 0;
+  height: 0;
+  content: '';
+  bottom: -0.75em;
+  right: -0.75em;
+  transform: rotate(90deg);
+  border-top: 1.5em solid transparent;
+  border-bottom: 1.5em solid transparent;
+  border-right: 1.5em solid blue;
+}
+
+input#chat-input {
+  width: 88%;
+  padding: 0.5em;
+  border-radius: 1.25em;
+}
+
+button#chat-button {
+  width: 9%;
+  padding: 0.5em;
+  border-radius: 1.25em;
+}
