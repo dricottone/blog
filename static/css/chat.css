@@ -20,7 +20,7 @@ ul#chat-room li {
   border-radius: 1.25em;
   list-style: none;
   word-break: break-word;
-  background-color: green;
+  background-color: #bbffbb;
 }
 
 ul#chat-room li::before {
@@ -33,11 +33,19 @@ ul#chat-room li::before {
   transform: rotate(90deg);
   border-top: 1.5em solid transparent;
   border-bottom: 1.5em solid transparent;
-  border-right: 1.5em solid green;
+  border-right: 1.5em solid #bbffbb;
+}
+
+ul#chat-room li.unreadable {
+  background-color: #ff6666;
+}
+
+ul#chat-room li.unreadable::before {
+  border-right: 1.5em solid #ff6666;
 }
 
 ul#chat-room li.own {
-  background-color: blue;
+  background-color: #bbffff;
   margin: 0.5em 0 0 4em;
 }
 
@@ -55,7 +63,7 @@ ul#chat-room li.own::after {
   transform: rotate(90deg);
   border-top: 1.5em solid transparent;
   border-bottom: 1.5em solid transparent;
-  border-right: 1.5em solid blue;
+  border-right: 1.5em solid #bbffff;
 }
 
 input#chat-input {
