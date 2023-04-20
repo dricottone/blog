@@ -40,21 +40,21 @@ Additionally, 'See also' sections have been added with links to
 {Arch,{Free,Open}BSD} `man` pages, reference documents, and other Wikis.
 
 I standardized all of my articles about
-[SAS](wiki.dominic-ricottone.com/SAS),
-[SPSS](wiki.dominic-ricottone.com/SPSS), and
-[Stata](wiki.dominic-ricottone.com/Stata).
+[SAS](https://wiki.dominic-ricottone.com/SAS),
+[SPSS](https://wiki.dominic-ricottone.com/SPSS), and
+[Stata](https://wiki.dominic-ricottone.com/Stata).
 I'm starting to stub out articles for R based on them.
 
 I've made significant headway with populating my Wiki articles about
-[shell](wiki.dominic-ricottone.com/Shell),
-[bash](wiki.dominic-ricottone.com/Bash),
-[Docker](wiki.dominic-ricottone.com/Docker),
-[Podman](wiki.dominic-ricottone.com/Podman), and
-[python](wiki.dominic-ricottone.com/Python).
+[shell](https://wiki.dominic-ricottone.com/Shell),
+[bash](https://wiki.dominic-ricottone.com/Bash),
+[Docker](https://wiki.dominic-ricottone.com/Docker),
+[Podman](https://wiki.dominic-ricottone.com/Podman), and
+[python](https://wiki.dominic-ricottone.com/Python).
 The last one in particular has much work left.
 Once that is complete, I'll look towards
-[JavaScript](wiki.dominic-ricottone.com/JavaScript) and
-[Node](wiki.dominic-ricottone.com/Node),
+[JavaScript](https://wiki.dominic-ricottone.com/JavaScript) and
+[Node](https://wiki.dominic-ricottone.com/Node),
 since there's so much overlap there.
 I also consistently need to lookup the references for quick-and-dirty web
 programming, so I think it will be a solid investment of time.
