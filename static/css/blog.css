@@ -23,6 +23,12 @@ article p.noindent {
   text-indent: 0;
 }
 
+/* Highlighted syntax */
+div.highlight > pre > code {
+  overflow-x: scroll;
+  display: block;
+}
+
 /* Table of Contents */
 div#toc {
   left: calc(900px + 2em);
