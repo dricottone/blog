@@ -11,7 +11,7 @@
   <button onclick="togglePassword()">Password</button>
   <div id="passwd-content" class="hidden">
     <p>To enable symmetric encryption, enter a password into this text box.</p>
-    <input id="passwd-input" type="text">
+    <input id="passwd-input" autocomplete="off" type="text">
     <button id="passwd-button">Update Key</button>
 
     <p>The intended recipients of your messages need to put the same password into this text box, too.</p>
@@ -21,5 +21,5 @@
 </div>
 
 <ul id="chat-room"></ul>
-<input id="chat-input" type="text">
+<input id="chat-input" autocomplete="off" type="text">
 <button id="chat-button">Send</button>

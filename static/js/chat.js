@@ -217,12 +217,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
   chatButton.onclick = async () => {
     const msg = chatInput.value;
-    if (passkey == null) {
-      const signed = await justSign(msg);
-      socket.send(signed);
+    if (msg === "") {
+      console.log("cannot send an empty message");
     } else {
-      const encrypted = await encryptAndSign(msg);
-      socket.send(encrypted);
+      chatInput.value = "";
+
+      if (passkey == null) {
+        const signed = await justSign(msg);
+        socket.send(signed);
+      } else {
+        const encrypted = await encryptAndSign(msg);
+        socket.send(encrypted);
+      }
     }
   };
 
