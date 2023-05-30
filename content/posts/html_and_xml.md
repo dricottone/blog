@@ -80,7 +80,7 @@ But for my personal projects, a hack job is just as good.
 [^1]: Compare the XML declaration, document type declaration, and root
       element for XHTML:
 
-      ```
+      ```xml
       <?xml version="1.0" encoding="UTF-8" ?>
       <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
       <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
@@ -89,7 +89,7 @@ But for my personal projects, a hack job is just as good.
       To the document type declaration, root element, and charset declaration for
       HTML4:
 
-      ```
+      ```html
       <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
       <html lang="en">
       <head><meta charset="utf-8">
@@ -97,7 +97,7 @@ But for my personal projects, a hack job is just as good.
 
       To that for HTML5:
 
-      ```
+      ```html
       <!DOCTYPE html>
       <html lang="en">
       <head><meta charset="utf-8">
