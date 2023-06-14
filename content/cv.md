@@ -109,6 +109,7 @@ I worked with Dr. Roehmholdt to draft a case report of penile melanoma.*
  + #### SAS Programming 1: Essentials
    *November 2019*
    + Training to write SAS programs to access, explore, prepare, and analyze data
+   + View certificate on [Credly](https://www.credly.com/badges/def2574e-4c57-4d03-a7be-fa6cd15da1a0/public_url)
 
 ### CITI Program
 
@@ -120,8 +121,9 @@ I worked with Dr. Roehmholdt to draft a case report of penile melanoma.*
 ### Department of Defense Cyber Exchange
 
  + #### Cyber Awareness Challenge
-   *April 2019*
+   *April 2019 to present*
    + Training to mitigate threats and vulnerabilities to department information systems
+   + Current certificate verification code is HKY37X6SPE
 
  + #### Identifying and Safeguarding Personally Identifiable Information
    *April 2019 to present*
