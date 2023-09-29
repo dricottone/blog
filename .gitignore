@@ -5,6 +5,9 @@ public/
 # script-generated files
 static/files/dominic-ricottone.html
 static/files/dominic-ricottone.pdf
+layouts/partials/bsky.html
+layouts/partials/lastfm.html
+layouts/partials/openring.html
 
 # (la|odf)?tex compilation artifacts
 **/*.aux
@@ -12,4 +15,8 @@ static/files/dominic-ricottone.pdf
 **/*.out
 **/*.pdf
 **/*.tex
+
+# API keys
+bsky-passwd
+lastfm-passwd
 

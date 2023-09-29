@@ -19,12 +19,24 @@ static/files/dominic-ricottone.html: content/cv.md
 	cat content/cv.md \
 		| scripts/cv_html.awk > static/files/dominic-ricottone.html
 
-.PHONY:
-dev: static/files/dominic-ricottone.pdf static/files/dominic-ricottone.html
+layouts/partials/bsky.html:
+	scripts/bsky.sh > layouts/partials/bsky.html
+
+layouts/partials/lastfm.html:
+	scripts/lastfm.sh > layouts/partials/lastfm.html
+
+layouts/partials/openring.html:
+	scripts/openring.sh > layouts/partials/openring.html
+
+PREGEN_HTML=static/files/dominic-ricottone.pdf static/files/dominic-ricottone.html layouts/partials/bsky.html layouts/partials/lastfm.html layouts/partials/openring.html
+.PHONY: $(PREGEN_HTML)
+
+.PHONY: dev
+dev: $(PREGEN_HTML)
 	hugo server --buildDrafts --bind 127.0.0.1 --port 8080
 
 .PHONY: build
-build: clean static/files/dominic-ricottone.pdf static/files/dominic-ricottone.html
+build: clean $(PREGEN_HTML)
 	hugo
 
 .PHONY: check

@@ -4,9 +4,9 @@
   <h1>{{ .Title }}</h1>
 
   {{ .Content }}
-
-  <hr />
 </div>
+
+<hr class="content-width" />
 
 <div id="blog-content">
   <p>These are my three most recent blog posts. More posts can be found on the 'Blog' tab.<p>
@@ -25,6 +25,30 @@
     {{ end }}
     {{ end }}
   </ul>
+</div>
+
+<hr class="content-width" />
+
+<div id="bsky-content">
+  <p>I occasionally post on <a href="https://bsky.app/profile/dricottone.bsky.social">Bluesky</a>, mostly about concerts and music.</p>
+
+  {{ partial "bsky.html" . }}
+</div>
+
+<hr class="content-width" />
+
+<div id="lastfm-content">
+  <p>Here's my most listened to music from the last 30 days. See more on <a href="https://www.last.fm/user/al__dente">LastFM</a></p>
+
+  {{ partial "lastfm.html" . }}
+</div>
+
+<hr class="content-width" />
+
+<div id="openring-content">
+  <p>Articles from the internet that I've been reading</p>
+
+  {{ partial "openring.html" . }}
 </div>
 
 {{ end }}

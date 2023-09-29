@@ -4,6 +4,86 @@ div#blog-content {
   padding: 0 0 0 10px;
 }
 
+div#bsky-content {
+  margin: 0;
+  max-width: 800px;
+  padding: 0 0 0 10px;
+}
+
+div#bsky-content ul {
+  margin: 0 10px 0 30px;
+}
+
+div#bsky-content li {
+  position: relative;
+  margin: 0.5em 0;
+  padding: 0.5em;
+  border-radius: 1.25em;
+  list-style: none;
+  background-color: #bbffbb;
+}
+
+div#bsky-content li::before {
+  position: absolute;
+  width: 0;
+  height: 0;
+  content: '';
+  bottom: -0.75em;
+  left: -0.75em;
+  transform: rotate(90deg);
+  border-top: 1.5em solid transparent;
+  border-bottom: 1.5em solid transparent;
+  border-right: 1.5em solid #bbffbb;
+}
+
+div#openring-content {
+  margin: 0;
+  max-width: 800px;
+  padding: 0.5em;
+}
+
+div#openring-content div {
+  margin: 1em;
+  border-radius: 1.25em;
+  background-color: #bbffff;
+}
+
+
+div#openring-content div > p {
+  margin: 0 0 1em 1em;
+  line-height: 1.5em;
+  color: #777;
+  font-style: italic;
+}
+
+div#openring-content div > p a {
+  color: #777;
+}
+
+div#openring-content ul {
+  margin: 0;
+  padding: 0.25em 0 0.25em 0;
+  list-style: none;
+}
+
+div#openring-content li {
+  margin: 0.5em;
+  padding: 0.5em;
+  border-radius: 1.25em;
+  background-color: #fff;
+}
+
+div#lastfm-content {
+  margin: 0;
+  max-width: 800px;
+  padding: 0 0 0 10px;
+}
+
+hr.content-width {
+  max-width: 800px;
+  padding-left: 10px;
+}
+
 ul#blog-list {
   margin: 0;
   padding: 0;
