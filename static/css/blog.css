@@ -1,13 +1,13 @@
 div#blog-content {
   margin: 0;
   max-width: 800px;
-  padding: 0 0 0 10px;
+  padding-left: 10px;
 }
 
 div#bsky-content {
   margin: 0;
   max-width: 800px;
-  padding: 0 0 0 10px;
+  padding-left: 10px;
 }
 
 div#bsky-content ul {
@@ -39,7 +39,7 @@ div#bsky-content li::before {
 div#openring-content {
   margin: 0;
   max-width: 800px;
-  padding: 0.5em;
+  padding-left: 10px;
 }
 
 div#openring-content div {
