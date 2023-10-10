@@ -1,15 +1,15 @@
-#!/bin/sh
+#!/bin/bash
 
 API_PASSWD="$(cat bsky-passwd)"
 
 DID_HANDLE='handle=dricottone.bsky.social'
 DID_URI='https://bsky.social/xrpc/com.atproto.identity.resolveHandle'
-DID="$(curl --get --no-progress-meter --data-urlencode "$DID_HANDLE" "$DID_URI" | jq --raw-output .did)"
+DID="$(curl --get --no-progress-meter --data-urlencode "$DID_HANDLE" "$DID_URI" | jq --raw-output '.did')"
 
 APIKEY_URI='https://bsky.social/xrpc/com.atproto.server.createSession'
 APIKEY_HEADER='Content-Type: application/json'
 APIKEY_DATA="{ \"identifier\": \"$DID\", \"password\": \"$API_PASSWD\" }"
-APIKEY="$(curl -X POST --no-progress-meter --header "$APIKEY_HEADER" --data "$APIKEY_DATA" "$APIKEY_URI" | jq --raw-output .accessJwt)"
+APIKEY="$(curl -X POST --no-progress-meter --header "$APIKEY_HEADER" --data "$APIKEY_DATA" "$APIKEY_URI" | jq --raw-output '.accessJwt')"
 
 FEED_URI='https://bsky.social/xrpc/app.bsky.feed.getAuthorFeed'
 FEED_HEADER="Authorization: Bearer $APIKEY"

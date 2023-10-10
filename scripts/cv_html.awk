@@ -1,4 +1,4 @@
-#!/bin/awk -f
+#!/usr/bin/gawk -f
 
 function end_section() {
   print "</ul>";
