@@ -1,7 +1,7 @@
 ---
 title: Cleaning Up
 date: "2023-11-11T20:22:52+00:00"
-draft: true
+draft: false
 ---
 
 I've restructured the way permalinks are generated.

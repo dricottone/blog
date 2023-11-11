@@ -33,7 +33,7 @@ layouts/partials/openring.html:
 
 PREGEN_HTML=static/files/dominic-ricottone.pdf static/files/dominic-ricottone.html layouts/partials/bsky.html layouts/partials/lastfm.html layouts/partials/openring.html
 
-build: $(PREGEN_HTML) clean
+build: clean $(PREGEN_HTML)
 	hugo
 
 check:
