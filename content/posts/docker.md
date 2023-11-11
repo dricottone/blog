@@ -1,6 +1,8 @@
 ---
 title: "Docker"
 date: 2020-07-10T17:12:12-04:00
+aliases:
+  - "/posts/docker"
 draft: false
 ---
 

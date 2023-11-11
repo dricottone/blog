@@ -1,6 +1,8 @@
 ---
 title: Vacation 2023
 date: "2023-04-26T09:35:51-05:00"
+aliases:
+  - "/posts/vacation_2023"
 draft: false
 ---
 

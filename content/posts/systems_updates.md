@@ -1,6 +1,8 @@
 ---
 title: Systems Updates
 date: "2022-11-12T18:32:12-06:00"
+aliases:
+  - "/posts/systems_updates"
 draft: false
 ---
 

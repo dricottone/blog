@@ -1,6 +1,8 @@
 ---
 title: "I Moved"
 date: 2021-11-11T22:56:46-06:00
+aliases:
+  - "/posts/i_moved"
 draft: false
 ---
 

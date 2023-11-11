@@ -1,6 +1,8 @@
 ---
 title: HTML and XML
 date: "2022-10-27T11:08:41-05:00"
+aliases:
+  - "/posts/html_and_xml"
 draft: false
 ---
 

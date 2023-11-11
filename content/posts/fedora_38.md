@@ -1,6 +1,8 @@
 ---
 title: "Fedora 38"
 date: "2023-04-19T21:59:07-05:00"
+aliases:
+  - "/posts/fedora_38"
 draft: false
 ---
 

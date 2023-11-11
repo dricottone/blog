@@ -1,6 +1,8 @@
 ---
 title: Thoughts on the Organization of History
 date: "2023-05-19T11:30:26-05:00"
+aliases:
+  - "/posts/thoughts_on_the_organization_of_history"
 draft: false
 ---
 

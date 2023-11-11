@@ -4,6 +4,9 @@ title = "Dominic Ricottone"
 disableKinds = ["taxonomy", "taxonomyTerm"]
 summaryLength = 20
 
+[permalinks]
+posts = "/posts/:year/:month/:slug"
+
 [markup.goldmark.renderer]
 unsafe=true
 

@@ -1,6 +1,8 @@
 ---
 title: Rate Limiting
 date: "2023-03-29T23:55:56-05:00"
+aliases:
+  - "/posts/rate_limiting"
 draft: false
 ---
 

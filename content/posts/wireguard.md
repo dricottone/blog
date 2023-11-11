@@ -1,6 +1,8 @@
 ---
 title: "WireGuard"
 date: 2022-09-28T20:05:20-05:00
+aliases:
+  - "/posts/wireguard"
 draft: false
 ---
 

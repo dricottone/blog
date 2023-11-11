@@ -1,6 +1,8 @@
 ---
 title: Logging and Rate Limiting, Take 2
 date: "2023-08-08T12:12:32-05:00"
+aliases:
+  - "/posts/logging_and_rate_limiting_take_2"
 draft: false
 ---
 

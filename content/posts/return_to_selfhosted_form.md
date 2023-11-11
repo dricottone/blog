@@ -1,6 +1,8 @@
 ---
 title: "Return to self-hosted form"
 date: 2022-09-14T15:56:55-05:00
+aliases:
+  - "/posts/return_to_selfhosted_form"
 draft: false
 ---
 

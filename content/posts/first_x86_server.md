@@ -1,6 +1,8 @@
 ---
 title: First x86 Server
 date: "2023-07-27T12:20:19-05:00"
+aliases:
+  - "/posts/first_x86_server"
 draft: false
 ---
 

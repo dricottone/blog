@@ -1,6 +1,8 @@
 ---
 title: Busy Winter
 date: "2022-12-27T21:06:51-06:00"
+aliases:
+  - "/posts/busy_winter"
 draft: false
 ---
 

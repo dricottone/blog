@@ -1,6 +1,8 @@
 ---
 title: "Progress and the lack thereof"
 date: 2022-09-18T17:44:00-05:00
+aliases:
+  - "/posts/progress_and_the_lack_thereof"
 draft: false
 ---
 

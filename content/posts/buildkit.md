@@ -1,6 +1,8 @@
 ---
 title: BuildKit
 date: "2023-05-29T21:29:33-05:00"
+aliases:
+  - "/posts/buildkit"
 draft: false
 ---
 

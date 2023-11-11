@@ -1,6 +1,8 @@
 ---
 title: Disruption from Google and Red Hat
 date: "2023-06-27T14:59:08-05:00"
+aliases:
+  - "/posts/disruption_from_google_and_red_hat"
 draft: false
 ---
 

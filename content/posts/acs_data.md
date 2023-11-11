@@ -1,6 +1,8 @@
 ---
 title: ACS Data
 date: "2023-03-21T20:34:24-05:00"
+aliases:
+  - "/posts/acs_data"
 draft: false
 ---
 

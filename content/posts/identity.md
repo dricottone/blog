@@ -1,6 +1,8 @@
 ---
 title: Identity
 date: 2022-10-06T10:13:32-05:00
+aliases:
+  - "/posts/identity"
 draft: false
 ---
 
