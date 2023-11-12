@@ -41,9 +41,9 @@ check:
 
 dev: $(PREGEN_HTML)
 	hugo --buildDrafts --baseURL https://dev.intra.dominic-ricottone.com
-	rsync --recursive --links --compress --delete public/ alarm@arch3.intra.dominic-ricottone.com:/var/deploy/web/
+	rsync --recursive --links --compress --delete public/ alarm@arch3.intra.dominic-ricottone.com:/var/deploy/web/development
 
 publish: build
-	rsync --recursive --links --compress --delete --chown=admin:admin public/ admin-aws3:/var/deploy/build/blog/public/
+	rsync --recursive --links --compress --delete --chown=admin:admin public/ admin-aws3:/var/deploy/web/blog/
 
 .PHONY: clean build check dev publish
