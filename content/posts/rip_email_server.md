@@ -7,7 +7,7 @@ draft: false
 RIP my email server,
 [2023](/posts/2023/06/disruption-from-google-and-red-hat/) - 2023
 
-As you may have heard, Amazon wil soon begin charging an hourly rate for
+As you may have heard, Amazon will soon begin charging an hourly rate for
 public IPv4 addresses.
 *Fair enough*, you may say, *it is a scarse resource*.
 It isn't $42/year scarse.
