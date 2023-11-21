@@ -1,7 +1,7 @@
 ---
 title: IPv6
 date: "2023-11-21T01:21:06+00:00"
-draft: true
+draft: false
 ---
 
 What follows is my journey on adopting IPv6-only addressing for my cloud
