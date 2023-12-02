@@ -12,5 +12,6 @@ openring \
   -s https://christianbrickhouse.com/feed.xml \
   -s https://andreabergia.com/post/index.xml \
   -s https://ludic.mataroa.blog/rss/ \
+  -s https://tradediversion.net/feed/ \
   < scripts/openring.html
 
