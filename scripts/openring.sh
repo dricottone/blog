@@ -13,5 +13,7 @@ openring \
   -s https://andreabergia.com/post/index.xml \
   -s https://ludic.mataroa.blog/rss/ \
   -s https://tradediversion.net/feed/ \
+  -s https://vincent.bernat.ch/en/blog/atom.xml \
+  -s https://blog.cr.yp.to/feed.application=xml \
   < scripts/openring.html
 
