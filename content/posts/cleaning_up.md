@@ -12,7 +12,7 @@ setting the permalink template with that 'variable'.
 
 To prevent breakage of existing links, I've set up aliases.
 That's another very convenient feature of Hugo.
-I've also seens some recipes online for creating aliases automatically.
+I've also seems some recipes online for creating aliases automatically.
 I'm not currently sold on the idea of setting up named aliases for all posts
 going forward,
 but I'll revisit that in the new year.
@@ -24,7 +24,7 @@ permalinks based on publication date.
 
 I've significantly reworked my development workflow in the last couple months.
 It's become a headache to try and keep all of my internal toolchains,
-script interpretters, and document processors up-to-date across all of the
+script interpreters, and document processors up-to-date across all of the
 hosts I use.
 For a long time, I liked to think that I sidestepped this issue by using POSIX
 scripts.

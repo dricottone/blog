@@ -98,7 +98,7 @@ Salazar and the co-founders certainly seem to have a disposition towards
 Druids are also devoted to a philosophy of balance that is colored by their
 worldview.
 Again, in D&D, this largely has to do with nature as elemental magics.
-They are motivated to action in defence of this balance.
+They are motivated to action in defense of this balance.
 
 Salazar certainly had opinions about the balance of magical society.
 Unfortunately, his worldview was colored by racism and bigotry.

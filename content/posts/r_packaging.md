@@ -21,9 +21,9 @@ And Red Hat's actions these past few years
 [this](https://dev.intra.dominic-ricottone.com/posts/2023/06/disruption-from-google-and-red-hat/))
 have erased any chance of me
 deploying a *new* Fedora server.
-So it's not a distro that I will ever be targetting in this project.
+So it's not a distro that I will ever be targeting in this project.
 
-Ubuntu is an interesting prospect for me because my usecase for that distro
+Ubuntu is an interesting prospect for me because my use case for that distro
 is setting up a server without any configuration
 (because I don't necessarily intend to keep it for long).
 If I can move *away* from compiling software on those hosts,
@@ -49,7 +49,7 @@ At the time,
 I consistently ran into stability issues with R.
 So much of the R ecosystem depends on libraries with dozens of direct and
 indirect dependencies.
-Many of them are compiled libraries linked not only to eachother but also to
+Many of them are compiled libraries linked not only to each other but also to
 other system libraries.
 This network seems to be well supported on many distros...
 but not so much on Arch Linux.
@@ -95,7 +95,7 @@ Lastly, I've gained an appreciation for the TidyVerse.
 I've always seen it as bloatware.
 Too much functionality when less would have worked.
 But given the R ecosystem of today,
-'targetting less' means adopting a more complex dependency structure.
+'targeting less' means adopting a more complex dependency structure.
 It means pinning the versions of several libraries instead of one.
 It means supporting users as they struggle to install several packages
 instead of just one that they *probably already have installed on their system

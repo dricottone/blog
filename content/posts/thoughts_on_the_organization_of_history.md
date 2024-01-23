@@ -36,7 +36,7 @@ I admittedly knew very little about Romanian history until this week.
 But as I poured over Wikipedia articles about the region and government,
 I started recognizing many names.
 *Thokoly*, whose name adorns many streets and public squares in Budapest, was
-in fact a Transylanian leader.
+in fact a Transylvanian leader.
 Same with *Rakoczi*.
 Both of them have statues in Hero's Square, alongside Stephen Bocskai
 and Gabriel Bethlen.

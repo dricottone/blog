@@ -29,7 +29,7 @@ that no tears were spilled on its behalf.)
 So... *migrating registries*.
 I re-researched the market and decided that it was time to join the Cloudflare
 hype train.
-Their interfaces are fine, they aren't too annoying with the upsell marketing.
+Their interfaces are fine, they aren't too annoying with the up-sell marketing.
 It's not a terrible experience.
 It actually was easier to do than I expected, including setting up dynamic DNS
 for my home IP address.

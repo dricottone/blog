@@ -9,8 +9,8 @@ RIP my email server,
 
 As you may have heard, Amazon will soon begin charging an hourly rate for
 public IPv4 addresses.
-*Fair enough*, you may say, *it is a scarse resource*.
-It isn't $42/year scarse.
+*Fair enough*, you may say, *it is a scarce resource*.
+It isn't $42/year scare.
 I categorically refuse this highway robbery.
 
 So, it seems I am embarking on a journey to the strange lands of IPv6.
@@ -28,7 +28,7 @@ published.
 Google's mail server
 *(the only one that matters, as far as I'm concerned)*
 will *not* talk to your server if your domain name and IP address fail the
-roundtrip MX -> A -> PTR -> A lookup.
+round trip MX -> A -> PTR -> A lookup.
 
 And it isn't just the static IPv4 addresses that are going to become a paid
 feature.
@@ -41,7 +41,7 @@ The only way around this is to convert your stack for IPv6.
 For decades even.
 Time's up.*
 Sure, and I'm fine with that.
-I'll eat the cost of my own stubborness.
+I'll eat the cost of my own stubbornness.
 But losing the PTR record means I have to shut down my mail server.
 
 *Surely AWS supports IPv6 PTR records* you may protest.
@@ -88,7 +88,7 @@ I had a lot of TODO projects floating around that were going to build off of
 this mail server.
 I devoted a lot of time to figuring out how SMTP worked in theory,
 and how it worked in practice,
-and trying to defend my system from webcrawlers.
+and trying to defend my system from web crawlers.
 I'm sad to see it go.
 RIP.
 

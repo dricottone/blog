@@ -17,7 +17,7 @@ that's a result of errors upstream, or of running on unsupported architectures
 (i.e. arm64).
 Dependencies are heavily vendored, particularly for the services written in
 Python.
-There are about 16 damonized services in all, communicating through a central
+There are about 16 daemonized services in all, communicating through a central
 postgreSQL database, an ephemeral Redis database, and a GraphQL API.
 
 That's all fine though.
