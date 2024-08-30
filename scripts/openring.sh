@@ -1,7 +1,7 @@
 #!/bin/sh
 
 openring \
-  -s https://drewdevault.com/feed.xml \
+  -s https://drewdevault.com/blog/index.xml \
   -s https://emersion.fr/blog/rss.xml \
   -s https://gregoryszorc.com/blog/feed/ \
   -s https://words.filippo.io/rss/ \
@@ -15,5 +15,11 @@ openring \
   -s https://tradediversion.net/feed/ \
   -s https://vincent.bernat.ch/en/blog/atom.xml \
   -s https://blog.cr.yp.to/feed.application=xml \
+  -s https://statmodeling.stat.columbia.edu/feed/ \
+  -s https://adarshbadri.me/feed/ \
+  -s https://imperfectnotes.substack.com/feed/ \
+  -s https://danieldrezner.substack.com/feed/ \
+  -s https://fuzzynotes.adarshbadri.me/feed/ \
+  -s https://justthesocialfacts.blogspot.com/feeds/posts/default?alt=rss \
   < scripts/openring.html
 

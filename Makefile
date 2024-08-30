@@ -28,7 +28,7 @@ layouts/partials/bsky.html:
 layouts/partials/lastfm.html:
 	scripts/lastfm.sh > layouts/partials/lastfm.html
 
-layouts/partials/openring.html:
+layouts/partials/openring.html: scripts/openring.sh
 	scripts/openring.sh > layouts/partials/openring.html
 
 PREGEN_HTML=static/files/dominic-ricottone.pdf static/files/dominic-ricottone.html layouts/partials/bsky.html layouts/partials/lastfm.html layouts/partials/openring.html
