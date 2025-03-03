@@ -6,7 +6,7 @@ draft: false
 
 Earlier this year,
 I found a way to
-[build packages for Alpine Linux within a Docker container](https://git.dominic-ricottone.com/~dricottone/simple-builder).
+[build packages for Alpine Linux within a Docker container](https://git.sr.ht/~dricottone/simple-builder).
 Specifically, I use that system to build packages for all of the Python and Go
 programs underpinning my git server.
 It was a fun project that taught me a lot about the Alpine Linux ecosystem.
@@ -41,7 +41,7 @@ hosts?
 Also earlier this year, I
 [tried](https://dev.intra.dominic-ricottone.com/posts/2023/03/acs-data/)
 to do some
-[replication work](https://git.dominic-ricottone.com/~dricottone/chicago)
+[replication work](https://git.sr.ht/~dricottone/chicago)
 in R and SAS.
 (By which I mean: in SAS, but I tried to use R for an API.)
 

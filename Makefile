@@ -41,7 +41,7 @@ check:
 
 dev: $(PREGEN_HTML)
 	hugo --buildDrafts --baseURL https://dev.intra.dominic-ricottone.com
-	rsync --recursive --links --compress --delete public/ alarm@arch3.intra.dominic-ricottone.com:/var/deploy/web/development
+	rsync --recursive --links --compress --delete public/ arch5.intra.dominic-ricottone.com:/var/deploy/web/dev
 
 publish: build
 	rsync --recursive --links --compress --delete --chown=admin:admin public/ admin-aws3:/var/deploy/web/blog/
