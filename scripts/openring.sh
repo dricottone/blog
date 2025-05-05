@@ -22,5 +22,6 @@ openring \
   -s https://fuzzynotes.adarshbadri.me/feed/ \
   -s https://justthesocialfacts.blogspot.com/feeds/posts/default?alt=rss \
   -s https://mitchellh.com/feed.xml \
+  -s https://xeiaso.net/blog.rss \
   < scripts/openring.html
 
