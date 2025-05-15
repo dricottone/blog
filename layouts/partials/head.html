@@ -15,9 +15,12 @@
   <!--Stylesheets-->
   <link rel="stylesheet" type="text/css" href="/css/common.css" />
   <link rel="stylesheet" type="text/css" href="/css/blog.css" />
+  {{ if .Params.bsky }}     <link rel="stylesheet" type="text/css" href="/css/bsky.css" /> {{ end }}
   {{ if .Params.chat }}     <link rel="stylesheet" type="text/css" href="/css/chat.css" /> {{ end }}
   {{ if .Params.lightbox }} <link rel="stylesheet" type="text/css" href="/css/gallery.css" /> {{ end }}
   {{ if .Params.lightbox }} <link rel="stylesheet" type="text/css" href="/css/lightbox-2.11.3.min.css" /> {{ end }}
+  {{ if .Params.openring }} <link rel="stylesheet" type="text/css" href="/css/openring.css" /> {{ end }}
+  {{ if .Params.toc }}      <link rel="stylesheet" type="text/css" href="/css/toc.css" /> {{ end }}
 
   <!--JavaScript-->
   <script src="/js/jquery-3.6.0.min.js"></script>

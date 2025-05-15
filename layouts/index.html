@@ -1,55 +1,45 @@
 {{ define "main" }}
 
-<div id="content">
-  <h1>{{ .Title }}</h1>
+<h1>{{ .Title }}</h1>
 
-  {{ .Content }}
-</div>
+{{ .Content }}
 
-<hr class="content-width" />
+<hr/>
 
-<div id="blog-content">
-  <p>These are my three most recent blog posts. More posts can be found on the 'Blog' tab.<p>
+<p>Here are my most recent <a href="/posts/">blog posts</a>.<p>
 
-  <ul id="blog-list">
-    {{ with .Site.GetPage "/posts" }}
-    {{ range first 3 .Pages }}
-    <li>
-      <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+<ul id="blog-list">
+  {{ with .Site.GetPage "/posts" }}
+  {{ range first 3 .Pages }}
+  <li>
+    <p><a href="{{ .Permalink }}">{{ .Title }}</a>, <i>posted on {{ .Date.Format "2006-01-02" }}</i></p>
+    <p>{{ .Summary }}</p>
+    {{ if .Truncated }}<p><a href="{{ .Permalink }}">Read More…</a></p>{{ end }}
+  </li>
+  {{ end }}
+  {{ end }}
+</ul>
 
-      <p><i>posted on {{ .Date.Format "2006-01-02" }}</i></p>
+<hr/>
 
-      <p>{{ .Summary }}</p>
-      {{ if .Truncated }}<p><a href="{{ .Permalink }}">Read More…</a></p>{{ end }}
-    </li>
-    {{ end }}
-    {{ end }}
-  </ul>
-</div>
+<p>I occasionally post on <a href="https://bsky.app/profile/dricottone.bsky.social">Bluesky</a>, mostly about concerts and music.</p>
 
-<hr class="content-width" />
+{{ partial "bsky.html" . }}
 
-<div id="bsky-content">
-  <p>I occasionally post on <a href="https://bsky.app/profile/dricottone.bsky.social">Bluesky</a>, mostly about concerts and music.</p>
+<hr/>
 
-  {{ partial "bsky.html" . }}
-</div>
+<p>My most listened to music of the last 30 days. See more on <a href="https://www.last.fm/user/al__dente">LastFM</a>.</p>
 
-<hr class="content-width" />
+{{ partial "lastfm.html" . }}
 
-<div id="lastfm-content">
-  <p>Here's my most listened to music from the last 30 days. See more on <a href="https://www.last.fm/user/al__dente">LastFM</a></p>
+<hr/>
 
-  {{ partial "lastfm.html" . }}
-</div>
+<p>Articles from around the internet I would recommend reading.</p>
 
-<hr class="content-width" />
+{{ partial "openring.html" . }}
 
-<div id="openring-content">
-  <p>Articles from the internet that I've been reading</p>
+<hr/>
 
-  {{ partial "openring.html" . }}
-</div>
+Thanks for stopping by!
 
 {{ end }}
-

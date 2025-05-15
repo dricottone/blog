@@ -17,7 +17,7 @@ FEED_ACTOR="actor=$DID"
 FEED_LIMIT='limit=3'
 FEED="$(curl --get --no-progress-meter --header "$FEED_HEADER" --data-urlencode "$FEED_ACTOR" --data-urlencode "$FEED_LIMIT" "$FEED_URI" | jq --raw-output .feed)"
 
-echo "<ul>"
+echo "<ul id=\"bsky-list\">"
 echo "  <li>"
 echo "${FEED}" | jq --raw-output '.[0].post.record.text' | sed -e 's/.*/    <p>&<\/p>/'
 echo "  </li>"

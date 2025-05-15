@@ -1,16 +1,15 @@
 {{ define "main" }}
-<div id="blog-content">
 
-  <article>
-    <h1>{{ .Title }}</h1>
-    {{ .Content }}
-  </article>
+<h1>{{ .Title }}</h1>
 
-  <ul id="blog-list">
-    {{ range .Pages }}
-    <li><h2><a href="{{ .Permalink }}">{{ .Date.Format "2006-01-02" }} - {{ .Title }}</a></h2></li>
-    {{ end }}
-  </ul>
+<article>
+  {{ .Content }}
+</article>
 
-</div>
+<ul>
+  {{ range .Pages }}
+  <li><a href="{{ .Permalink }}">{{ .Date.Format "2006-01-02" }} - {{ .Title }}</a></li>
+  {{ end }}
+</ul>
+
 {{ end }}

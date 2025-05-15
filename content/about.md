@@ -3,27 +3,30 @@ title: Who am I? Why am I here?
 site_title: true
 ---
 
-I am a data management analyst in the field of market research.
-Currently I work at Fors Marsh Group, which specializes in federal
-contracts. My caseload includes:
+I am a **survey statistician** living in **Chicago**.
 
-+ JAMRS Futures Survey
-+ FVAP Overseas Citizens Population Survey
-+ Active Duty Military Post-Election Voting Survey
-+ NIST Manufacturing Extension Program Evaluation
-+ FirstNet Economic Evaluation
+I work on a variety of federal contracts that inform daily operations of the
+U.S. military and evaluate programs for ongoing improvement.
+For example, the **JAMRS Futures Survey** informs recruiters on the evolving
+priorities of American youth.
+As another, the **FVAP Overseas Citizens Population Survey** and **Active Duty
+Military Post-Election Voting Surveys** evaluate the implementation of UOCAVA
+and highlight areas for improvement.
 
-I have experience across research operations, from programming web
-surveys to computing weights.
-
-I live in Chicago but have spent most of my life in Western New York.
-I discovered my passion for programming and computer hardware after I'd
-already gone to school for Political Science and Economics.
+I am a computer hobbyist (both software and hardware).
+I also lack a formal background in statistics.
+Much of my free time goes into reading or experimentation,
+usually at the intersection of those two areas.
 
 My current side projects are:
 
-+ fleshing out my [personal wiki](https://wiki.dominic-ricottone.com) with
-  helpful documentation for statistical programming and server administration,
-  as well as transcribing my old college notes
-+ a static website generator for EPUB e-books
+ + sorting out the political history of U.K. prime ministers,
+   including the tricky bit of when they started having civilian heads of state
+ + a static website generator for EPUB e-books
+ + converting my old reading notes on
+   [poli sci](https://wiki.dominic-ricottone.com/PoliticalScience)
+   and [econ](https://wiki.dominic-ricottone.com/Economics)
+   into articles on my
+   [Wiki](https://wiki.dominic-ricottone.com/DominicRicottone)
+ + collecting vinyl
 

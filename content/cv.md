@@ -17,69 +17,66 @@ I am proficient in statistical programming especially with SPSS, Stata, and Pyth
 
 ## Employment
 ### Fors Marsh
-*A market research company primarily working federal contracts.
-I work on several high-profile surveys that drive national policy-making,
-such as the Department of Defense's continuously-running
-[Futures Survey](https://jamrs.defense.gov/Market-Research-Studies/Reports/).
-I hold a Common Access Card (CAC) in service of my Department of Defense funded contracts.*
+*Market research firm primarily working on federal contracts.
+For this work, I maintain several clearances as well as a DoD CAC.*
+
+ + #### Survey Sampling Statistician
+   *April 2024 to present*
+   + Designing and executing sampling and weighting plans for nationwide probability panels
+   + Designing weights for nonprobability web panel surveys
+   + Performing nonresponse bias analyses under complex survey designs with nonparametric modeling techniques
 
  + #### Data Management Analyst
    *February 2019 to present*
-   + Cleaning large (1M+) sample files with international addresses using SPSS, Stata, and Python
-   + Weighting survey data to mitigate design effects and non-response bias using Stata
-   + Writing technical chapters for analytical reports and incident report postmortems
-   + Validating multi-modal surveys operated through Decipher, VoxCo, and TeleForm using SPSS, Stata, Python, and R
-   + Reviewing and quality assurance testing of junior analysts' work
+   + Designing QA protocols to validate multi-modal survey instruments
+   + Developing automation to perform programmatic review of data quality
+   + Reviewing and advising junior analysts' work
+   + Creating U.S. and international address lists for survey sampling
+   + Supporting internal teams with statistical programming expertise in SPSS, Stata, Python, R, and Excel VBA
+
+ + #### IR&D Project Member
+   *May 2024 to April 2025*
+   + Developed MVP for an internal clone of the CDC's Q-Bank
 
 ### The Harris Poll
-*Market research company specializing in brand evaluation and concept testing.
-We operated at a breakneck pace, often launching a panel survey within days of
-winning a contract and delivering weighted data a week later.
-I developed automation programs, VBA macros, and shell scripts for my team
-to accelerate turnaround times.
-I led a migration to GitLab for version control and software maintenance.*
+*Market research firm.
+I started with the company in Rochester, New York
+and moved to the Arlington, Virginia office after a year.*
 
  + #### Junior Survey Programmer
    *November 2018 to February 2019*
-   + Programming web surveys with the Decipher platform
+   + Programming web surveys
 
  + #### Data Processing Programmer
    *September 2017 to November 2018*
-   + Weighting longitudinal survey data with stratified sampling for rolling-window B2C analysis using Quantum and SPSS
-   + Validating web surveys operated through Decipher and Confirmit with SPSS and Quantum
-   + Automating data cleaning and quality assurance processes through Bash, Python, and Perl
+   + Designing data pipelines
+   + Executing weighting plans for nonprobability panel surveys
+   + Migrating internal source code repositories into GitLab
 
 ### Chris Harris & Associates
 *Political consultancy firm working with Democratic officials across Western New York.*
 
  + #### Campaign Finance Intern
    *August 2017 to September 2017*
-   + Scraping contributions disclosures from web pages and PDF documents using Python
-   + Canvassing and organizing fundraisers for elected officials including Monroe and Erie County Democratic Committee Chairs, Monroe County Sheriff Todd Baxter, and the late Congresswoman Louise Slaughter
+   + Scraping web pages and PDF documents
+   + Coordinating fundraiser events for Monroe and Erie County Democratic Committees, election campaign for Todd Baxter, and re-election campaign for the late Congresswoman Louise Slaughter
 
 ### University of Rochester
-*Internationally-acclaimed research university and the largest single employer
-in the Rochester area.
-Decades of employment records are stored on- and off-site with strict protocols
-concerning access and retention.
-I worked with the Record Verification and Workers' Compensation teams as the
-centralized manager of employee data.*
+*Research university and the largest single employer in the Rochester, New York area.
+I worked with the Record Verification and Workers' Compensation teams.*
 
- + #### Human Resources Office Assistant
+ + #### Office Assistant
    *May 2016 to May 2017*
-   + Managing flow of protected files between physical offices when they are pulled for inquiries and audits
-   + Administering multiple modernization and digitization projects
+   + Managing original paper files of the Human Resources department
+   + Executing modernization and digitization plans
 
 ### Cancer Care of Western New York
-*Cancer treatment facility based in Buffalo.
-I scrubbed PII and PHI from patient records for use in secondary exempt
-research.
-I worked with Dr. Roehmholdt to draft a case report of penile melanoma.*
+*Cancer treatment facility in Buffalo, New York.
+I performed data entry tasks.*
 
  + #### Research Assistant
    *May 2013 to August 2013*
-   + Researching the medical academic literature on penile melanoma
-   + De-identifying data files in compliance with IRB and Common Rule exemptions
+   + De-identifying data for external transmission
 
 ------
 
@@ -88,11 +85,7 @@ I worked with Dr. Roehmholdt to draft a case report of penile melanoma.*
 
  + #### B.A. Political Science, Economics
    *August 2013 to May 2017*
-   + Overall GPA of 3.43
-   + Represented the student body for three years in varying levels of student government, including multiple executive appointments
-   + Focuses in:
-     + Mathematical modeling (Econometrics, Game Theory)
-     + Interaction of government and the private sector (Public Finance, Political Economy, Health Economics, Economics of Globalization)
+   + Selected courses: Econometrics, Game Theory, Public Finance, Health Economics
 
 ### 南山大学 (Nanzan University)
 
@@ -116,17 +109,5 @@ I worked with Dr. Roehmholdt to draft a case report of penile melanoma.*
  + #### Biomedical Research Support Staff
    *February 2019 to present*
    + Training in the requirements and ethical implications of human subject research, especially in the context of the 2018 revision of the Common Rule
-   + Current certificate ID is [45797471](https://www.citiprogram.org/verify/?wbc50a742-03db-4a64-bb98-43276215e6c1-45797471)
-
-### Department of Defense Cyber Exchange
-
- + #### Cyber Awareness Challenge
-   *April 2019 to present*
-   + Training to mitigate threats and vulnerabilities to department information systems
-   + Current certificate verification code is HKY37X6SPE
-
- + #### Identifying and Safeguarding Personally Identifiable Information
-   *April 2019 to present*
-   + Training in data governance of personally identifiable information
-   + Current certificate verification code is HKY75X3TQT
+   + Current certificate ID is [61007756](https://www.citiprogram.org/verify/?wa7d9655f-12e3-4225-9e78-a241c45900ff-61007756)
 

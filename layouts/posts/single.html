@@ -1,35 +1,22 @@
 {{ define "main" }}
-<div id="blog-content">
 
-  <article>
-    <h1>{{ .Title }}</h1>
-    <p class="noindent"><b>Date:</b> {{ .Date.Format "Mon 2006-01-02" }}</p>
-    <p class="noindent"><b>Permalink:</b> <a href="{{ .Permalink }}">{{ .Permalink }}</a></p>
+<h1>{{ .Title }}</h1>
 
-    <br />
+<p class="noindent"><b>Date:</b> {{ .Date.Format "Mon 2006-01-02" }}</p>
+<p class="noindent"><b>Permalink:</b> <a href="{{ .Permalink }}">{{ .Permalink }}</a></p>
+<br />
 
-    <div class="blog-post">
-      {{ .Content }}
-    </div>
-  </article>
+<article>
+  {{ .Content }}
+</article>
 
-  <br />
+<br />
 
-  <div>
-    {{ with .PrevInSection }}
-      <p><b>Previous article:</b> <a href="{{ .Permalink }}">{{ .Title }}</a></p>
-    {{ end }}
-    {{ with .NextInSection }}
-      <p><b>Next article:</b> <a href="{{ .Permalink }}">{{ .Title }}</a></p>
-    {{ end }}
-  </div>
+{{ with .PrevInSection }}
+  <p><b>Previous article:</b> <a href="{{ .Permalink }}">{{ .Title }}</a></p>
+{{ end }}
+{{ with .NextInSection }}
+  <p><b>Next article:</b> <a href="{{ .Permalink }}">{{ .Title }}</a></p>
+{{ end }}
 
-  <hr class="content-width" />
-
-  <div id="openring-content">
-    <p>Articles from the internet that I've been reading</p>
-
-    {{ partial "openring.html" . }}
-  </div>
-</div>
 {{ end }}

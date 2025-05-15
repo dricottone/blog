@@ -1,7 +1,7 @@
 /*
- * Blog post chat bubbles
+ * Bluesky content chat bubbles
  */
-ul#blog-list li {
+ul#bsky-list li {
   position: relative;
   margin: 0.5em 0;
   padding: 0.5em;
@@ -9,13 +9,13 @@ ul#blog-list li {
   list-style: none;
   background-color: #bbffbb;
 }
-ul#blog-list li:first-child {
+ul#bsky-list li:first-child {
   margin: 0 0 0.5em 0;
 }
-ul#blog-list li:last-child {
+ul#bsky-list li:last-child {
   margin: 0.5em 0 0 0;
 }
-ul#blog-list li::before {
+ul#bsky-list li::before {
   position: absolute;
   width: 0;
   height: 0;
@@ -26,24 +26,5 @@ ul#blog-list li::before {
   border-top: 1.5em solid transparent;
   border-bottom: 1.5em solid transparent;
   border-right: 1.5em solid #bbffbb;
-}
-
-/*
- * Article styles
- */
-article p {
-  text-indent: 2em;
-}
-
-article p.noindent {
-  text-indent: 0;
-}
-
-/*
- * Highlighted syntax
- */
-div.highlight > pre > code {
-  overflow-x: scroll;
-  display: block;
 }
 

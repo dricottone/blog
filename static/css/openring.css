@@ -1,0 +1,52 @@
+/*
+ * openring RSS chat bubbles
+ */
+ul#openring-list li {
+  position: relative;
+  margin: 0.5em 0;
+  padding: 0.5em;
+  border-radius: 1.25em;
+  list-style: none;
+  background-color: #bbffff;
+}
+ul#openring-list li:first-child {
+  margin: 0 0 0.5em 0;
+}
+ul#openring-list li:last-child {
+  margin: 0.5em 0 0 0;
+}
+ul#openring-list li::before {
+  position: absolute;
+  width: 0;
+  height: 0;
+  content: '';
+  bottom: -0.75em;
+  left: -0.75em;
+  transform: rotate(90deg);
+  border-top: 1.5em solid transparent;
+  border-bottom: 1.5em solid transparent;
+  border-right: 1.5em solid #bbffff;
+}
+
+p#openring-footer {
+  position: relative;
+  margin: 0 0 0 3em;
+  padding: 0.5em;
+  line-height: 2em;
+  border-radius: 1.25em;
+  background-color: #bbffbb;
+  font-style: italic;
+}
+p#openring-footer::before {
+  position: absolute;
+  width: 0;
+  height: 0;
+  content: '';
+  bottom: -0.75em;
+  left: -0.75em;
+  transform: rotate(90deg);
+  border-top: 1.5em solid transparent;
+  border-bottom: 1.5em solid transparent;
+  border-right: 1.5em solid #bbffbb;
+}
+
