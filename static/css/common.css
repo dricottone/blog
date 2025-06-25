@@ -1,6 +1,6 @@
 * {margin: 0; padding: 0; font-size: 100%; font: inherit}
-i {font-style: italic}
-b {font-weight: bold}
+i, em {font-style: italic}
+b, strong {font-weight: bold}
 table {border: none; border-collapse: collapse; border-spacing: 0}
 
 /*

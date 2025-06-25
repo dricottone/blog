@@ -40,10 +40,23 @@ article p.noindent {
 }
 
 /*
- * Highlighted syntax
+ * Code
  */
-div.highlight > pre > code {
-  overflow-x: scroll;
+code {
+  font-family: monospace, monospace;
+}
+
+pre:has(code) {
+  width: 100%;
   display: block;
+  margin-bottom: 1em;
+  padding: 1em;
+  box-sizing: border-box;
+  overflow-x: scroll;
+  background-color: #333333;
+}
+
+pre > code {
+  color: #ffffff;
 }
 
