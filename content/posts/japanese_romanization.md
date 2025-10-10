@@ -90,12 +90,12 @@ Which I am happy to stand by.
 
 ----
 
-There are some other discrepencies between what I write and what the standards
+There are some other discrepancies between what I write and what the standards
 suggest.
 Mostly these are the edge cases involving ん.
 If followed by a vowel,
 as in 小泉 純一郎 (こいずみ じゅんいちろう),
-the romanization can become ambuguous.
+the romanization can become ambiguous.
 Does 'ni' mean んい or に?
 Hepburn calls for inserting apostrophes,
 which I think is *hideous*.
@@ -129,7 +129,7 @@ Perhaps a point in its favor.
 And I will never convince people that 東京 (とうきょう) is 'Toukyou',
 or that 大阪 (おおさか) is 'Oosaka'.
 Perhaps another point in favor of Hepburn;
-by giving up the discrepency of 〜おお vs. 〜おう,
+by giving up the discrepancy of 〜おお vs. 〜おう,
 the standard achieves spellings like 'Tōkyō' and 'Ōsaka' that are
 simultaneously *readable* and *correct*.
 
