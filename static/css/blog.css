@@ -39,6 +39,15 @@ article p.noindent {
   text-indent: 0;
 }
 
+article blockquote {
+  margin-bottom: 1em;
+  background-color: #eeeeee;
+}
+
+article table tbody td, article table thead th {
+  padding: 0 2em;
+}
+
 /*
  * Code
  */
@@ -58,5 +67,23 @@ pre:has(code) {
 
 pre > code {
   color: #ffffff;
+}
+
+/*
+ * Hidden-by-default content
+ */
+article details {
+  margin-bottom: 1em;
+  background-color: #eeeeee;
+}
+article details summary {
+  padding: 1em;
+}
+article details[open] summary {
+  background-color: #888888;
+}
+article details summary p {
+  display: inline;
+  text-decoration: underline;
 }
 

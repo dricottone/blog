@@ -40,10 +40,10 @@ check:
 	for f in content/posts/*.md; do aspell --check $$f; done
 
 dev: $(PREGEN_HTML)
-	hugo --buildDrafts --baseURL https://dev.intra.dominic-ricottone.com
-	rsync --recursive --links --compress --delete public/ arch5.intra.dominic-ricottone.com:/var/deploy/web/dev
+	hugo --buildDrafts --baseURL https://dev.dominic-ricottone.com
+	rsync --recursive --links --compress --delete public/ arch6:/var/deploy/web/dev
 
 publish: build
-	rsync --recursive --links --compress --delete --chown=admin:admin public/ admin-aws3:/var/deploy/web/blog/
+	rsync --recursive --links --compress --delete public/ arch6:/var/deploy/web/prod
 
 .PHONY: clean build check dev publish
