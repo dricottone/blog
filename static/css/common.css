@@ -57,24 +57,24 @@ nav button p {
   line-height: 2;
 }
 
-nav ul#naviList {
+nav ul#list-navi {
   margin: 0;
 }
-nav ul#naviList.hide {
+nav ul#list-navi.hide {
   display: none;
 }
 
-nav ul#naviList li {
+nav ul#list-navi li {
   border-radius: 1rem;
   background-color: #e1e1e1;
   list-style: none;
   text-align: center;
 }
-nav ul#naviList li:hover, nav ul#naviList li:focus {
+nav ul#list-navi li:hover, nav ul#list-navi li:focus {
   background-color: #d1d1d1;
 }
 
-nav ul#naviList li a {
+nav ul#list-navi li a {
   display: block;
   margin: .25rem;
   line-height: 2;
@@ -90,7 +90,7 @@ nav ul#naviList li a {
   /*body {padding: 0}*/
   body {
     margin: 0;
-    max-width: 700px;
+    max-width: 720px;
   }
 
   /*main {margin: 1em; padding: 0}*/
@@ -104,29 +104,29 @@ nav ul#naviList li a {
 
   nav button {display: none}
 
-  /*nav ul#naviList {margin: 0}*/
-  nav ul#naviList, nav ul#naviList.hide {
+  /*nav ul#list-navi {margin: 0}*/
+  nav ul#list-navi, nav ul#list-navi.hide {
     display: flex;
     flex-direction: row;
   }
 
-  /*nav ul#naviList li {list-style: none}*/
-  nav ul#naviList li {
+  /*nav ul#list-navi li {list-style: none}*/
+  nav ul#list-navi li {
     margin: 0 0.5rem;
     background-color: transparent;
   }
-  nav ul#naviList li:first-child {
+  nav ul#list-navi li:first-child {
     margin: 0 0.5rem 0 0;
   }
-  nav ul#naviList li:last-child {
+  nav ul#list-navi li:last-child {
     margin: 0 0 0 0.5rem;
   }
-  nav ul#naviList li:hover, nav ul#naviList li:focus {
+  nav ul#list-navi li:hover, nav ul#list-navi li:focus {
     background-color: transparent;
   }
 
-  /*nav ul#naviList li a {line-height: 2}*/
-  nav ul#naviList li a {
+  /*nav ul#list-navi li a {line-height: 2}*/
+  nav ul#list-navi li a {
     display: inline;
     margin: 0;
     border-radius: unset;
@@ -140,7 +140,7 @@ nav ul#naviList li a {
   /*body {padding: 0}*/
   body {
     margin: 0 auto;
-    width: 700px;
+    width: 720px;
   }
 
   /*main {margin: 1em; padding: 0}*/
@@ -149,14 +149,14 @@ nav ul#naviList li a {
 
   /*nav button {display: none}*/
 
-  /*nav ul#naviList, nav ul#naviList.hide {margin: 0; display: flex; flex-direction: row}*/
+  /*nav ul#list-navi, nav ul#list-navi.hide {margin: 0; display: flex; flex-direction: row}*/
 
-  /*nav ul#naviList li {margin: 0 0.5rem; list-style: none; background-color: transparent}*/
-  /*nav ul#naviList li:first-child {margin: 0 0.5rem 0 0}*/
-  /*nav ul#naviList li:last-child {margin: 0 0 0 0.5rem}*/
-  /*nav ul#naviList li:hover, nav ul#naviList li:focus {background-color: transparent}*/
+  /*nav ul#list-navi li {margin: 0 0.5rem; list-style: none; background-color: transparent}*/
+  /*nav ul#list-navi li:first-child {margin: 0 0.5rem 0 0}*/
+  /*nav ul#list-navi li:last-child {margin: 0 0 0 0.5rem}*/
+  /*nav ul#list-navi li:hover, nav ul#list-navi li:focus {background-color: transparent}*/
 
-  /*nav ul#naviList li a {display: inline; margin: 0; line-height: 2; border-radius: unset}*/
+  /*nav ul#list-navi li a {display: inline; margin: 0; line-height: 2; border-radius: unset}*/
 }
 
 /*

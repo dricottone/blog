@@ -1,7 +1,7 @@
 baseURL = "https://www.dominic-ricottone.com/"
 languageCode = "en-us"
 title = "Dominic Ricottone"
-disableKinds = ["taxonomy", "taxonomyTerm"]
+disableKinds = ["taxonomy"]
 summaryLength = 20
 
 [permalinks]

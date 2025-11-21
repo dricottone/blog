@@ -45,5 +45,6 @@ dev: $(PREGEN_HTML)
 
 publish: build
 	rsync --recursive --links --compress --delete public/ arch6:/var/deploy/web/prod
+	rsync --recursive --links --compress --delete public/ admin-aws3:/var/deploy/web/blog
 
 .PHONY: clean build check dev publish

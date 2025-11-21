@@ -29,13 +29,13 @@
   <script>
 $(document).ready(function() {
   $("nav button#navi").on("click", function(event) {
-    $("nav ul#naviList").toggleClass("hide");
+    $("nav ul#list-navi").toggleClass("hide");
   });
   $("nav button#navi p").on("keypress", function(event) {
     if (event.which !== 13) {
       return;
     }
-    $("nav ul#naviList").toggleClass("hide");
+    $("nav ul#list-navi").toggleClass("hide");
   });
 });
   </script>
