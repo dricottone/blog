@@ -2,7 +2,25 @@
 title: A Series on SEM - Part 1
 date: "2025-11-21T16:10:50-06:00"
 draft: false
+summary: >
+    <p>Earlier this year, while reading Paul Allison’s
+    <em>Fixed Effects Regression Methods for Longitudinal Data Using SAS</em>,
+    I came across a peculiar claim.
+    “It is now well known (Muthén 1994) that a random effects models such as the
+    one in equation (6.1) can be represented as a structural equation model
+    (SEM).”</p>
 ---
+
+*Update 12/12/2025:
+On reflection, I've decided that it isn't appropriate to constrain the variance
+of residuals to be equal in every year.
+The output of my `-sem-` model has changed.
+As well,
+my `-gsem-` model is now called '`-gsem-` model 2'.
+I've inserted a '`-gsem-` model 1' which helps to demonstrate the change in
+approach.*
+
+----
 
 Earlier this year,
 while reading Paul Allison's
@@ -307,8 +325,7 @@ xij variables:
 >     (wage2014 <- age2014@b1 sq_age2014@b2 tenure2014@b3 Alpha@1 _cons@b0) ///
 >     (wage2015 <- age2015@b1 sq_age2015@b2 tenure2015@b3 Alpha@1 _cons@b0) ///
 >     (wage2016 <- age2016@b1 sq_age2016@b2 tenure2016@b3 Alpha@1 _cons@b0) ///
->     , latent(Alpha) means(Alpha@0) covariance(Alpha*_oexogenous@0) ///
->     covstructure(e.wage*, identity)
+>     , latent(Alpha) means(Alpha@0) covariance(Alpha*_oexogenous@0)
 
 Endogenous variables
   Observed: wage2013 wage2014 wage2015 wage2016
@@ -319,17 +336,17 @@ Exogenous variables
   Latent:   Alpha
 
 Fitting target model:
-Iteration 0:   log likelihood = -22055.499  
-Iteration 1:   log likelihood = -22052.233  
-Iteration 2:   log likelihood = -22012.972  
-Iteration 3:   log likelihood = -22012.684  
-Iteration 4:   log likelihood =  -22012.68  
-Iteration 5:   log likelihood =  -22012.68  
+Iteration 0:   log likelihood = -22053.522
+Iteration 1:   log likelihood =  -22048.99
+Iteration 2:   log likelihood =   -22011.8
+Iteration 3:   log likelihood =  -22011.38
+Iteration 4:   log likelihood = -22011.374
+Iteration 5:   log likelihood = -22011.374
 
 Structural equation model                                  Number of obs = 324
 Estimation method: ml
 
-Log likelihood = -22012.68
+Log likelihood = -22011.374
 
  ( 1)  [wage2013]age2013 - [wage2016]age2016 = 0
  ( 2)  [wage2013]sq_age2013 - [wage2016]sq_age2016 = 0
@@ -344,50 +361,47 @@ Log likelihood = -22012.68
  (11)  [wage2015]tenure2015 - [wage2016]tenure2016 = 0
  (12)  [wage2015]Alpha = 1
  (13)  [wage2016]Alpha = 1
- (14)  [/]var(e.wage2013) - [/]var(e.wage2016) = 0
- (15)  [/]var(e.wage2014) - [/]var(e.wage2016) = 0
- (16)  [/]var(e.wage2015) - [/]var(e.wage2016) = 0
- (17)  [wage2013]_cons - [wage2016]_cons = 0
- (18)  [wage2014]_cons - [wage2016]_cons = 0
- (19)  [wage2015]_cons - [wage2016]_cons = 0
+ (14)  [wage2013]_cons - [wage2016]_cons = 0
+ (15)  [wage2014]_cons - [wage2016]_cons = 0
+ (16)  [wage2015]_cons - [wage2016]_cons = 0
 --------------------------------------------------------------------------------
                |                 OIM
                | Coefficient  std. err.      z    P>|z|     [95% conf. interval]
 ---------------+----------------------------------------------------------------
 Structural     |
   wage2013     |
-       age2013 |    .451463    .067817     6.66   0.000     .3185441    .5843819
-    sq_age2013 |  -.0027395    .000787    -3.48   0.000     -.004282   -.0011969
-    tenure2013 |   .5923246    .020662    28.67   0.000     .5518277    .6328214
-         Alpha |          1   1.97e-16  5.1e+15   0.000            1           1
-         _cons |    8.49016   1.398321     6.07   0.000     5.749501    11.23082
+       age2013 |   .4536008   .0674572     6.72   0.000     .3213872    .5858144
+    sq_age2013 |  -.0027777   .0007827    -3.55   0.000    -.0043118   -.0012436
+    tenure2013 |    .592956   .0206208    28.76   0.000       .55254    .6333719
+         Alpha |          1   1.36e-16  7.3e+15   0.000            1           1
+         _cons |   8.467182   1.391699     6.08   0.000     5.739502    11.19486
   -------------+----------------------------------------------------------------
   wage2014     |
-       age2014 |    .451463    .067817     6.66   0.000     .3185441    .5843819
-    sq_age2014 |  -.0027395    .000787    -3.48   0.000     -.004282   -.0011969
-    tenure2014 |   .5923246    .020662    28.67   0.000     .5518277    .6328214
-         Alpha |          1  (constrained)
-         _cons |    8.49016   1.398321     6.07   0.000     5.749501    11.23082
+       age2014 |   .4536008   .0674572     6.72   0.000     .3213872    .5858144
+    sq_age2014 |  -.0027777   .0007827    -3.55   0.000    -.0043118   -.0012436
+    tenure2014 |    .592956   .0206208    28.76   0.000       .55254    .6333719
+         Alpha |          1   5.89e-16  1.7e+15   0.000            1           1
+         _cons |   8.467182   1.391699     6.08   0.000     5.739502    11.19486
   -------------+----------------------------------------------------------------
   wage2015     |
-       age2015 |    .451463    .067817     6.66   0.000     .3185441    .5843819
-    sq_age2015 |  -.0027395    .000787    -3.48   0.000     -.004282   -.0011969
-    tenure2015 |   .5923246    .020662    28.67   0.000     .5518277    .6328214
+       age2015 |   .4536008   .0674572     6.72   0.000     .3213872    .5858144
+    sq_age2015 |  -.0027777   .0007827    -3.55   0.000    -.0043118   -.0012436
+    tenure2015 |    .592956   .0206208    28.76   0.000       .55254    .6333719
          Alpha |          1  (constrained)
-         _cons |    8.49016   1.398321     6.07   0.000     5.749501    11.23082
+         _cons |   8.467182   1.391699     6.08   0.000     5.739502    11.19486
   -------------+----------------------------------------------------------------
   wage2016     |
-       age2016 |    .451463    .067817     6.66   0.000     .3185441    .5843819
-    sq_age2016 |  -.0027395    .000787    -3.48   0.000     -.004282   -.0011969
-    tenure2016 |   .5923246    .020662    28.67   0.000     .5518277    .6328214
+       age2016 |   .4536008   .0674572     6.72   0.000     .3213872    .5858144
+    sq_age2016 |  -.0027777   .0007827    -3.55   0.000    -.0043118   -.0012436
+    tenure2016 |    .592956   .0206208    28.76   0.000       .55254    .6333719
          Alpha |          1  (constrained)
-         _cons |    8.49016   1.398321     6.07   0.000     5.749501    11.23082
+         _cons |   8.467182   1.391699     6.08   0.000     5.739502    11.19486
 ---------------+----------------------------------------------------------------
-var(e.wage2013)|   4.238807   .1924287                      3.877946    4.633248
-var(e.wage2014)|   4.238807   .1924287                      3.877946    4.633248
-var(e.wage2015)|   4.238807   .1924287                      3.877946    4.633248
-var(e.wage2016)|   4.238807   .1924287                      3.877946    4.633248
-     var(Alpha)|   2.270894   .2668034                       1.80381    2.858927
+var(e.wage2013)|   4.065212    .392284                      3.364683    4.911592
+var(e.wage2014)|   4.793952   .4467889                      3.993586    5.754722
+var(e.wage2015)|    4.21896   .4055818                      3.494433    5.093708
+var(e.wage2016)|   3.912792   .3817376                      3.231784    4.737304
+     var(Alpha)|   2.247256   .2653749                      1.782935    2.832498
 --------------------------------------------------------------------------------
 
 . estimates store m_sem
@@ -403,41 +417,211 @@ Some notes about this model:
    I could have specified this constraint in 12 separate options like
    `cov(Alpha\*age2013@0) ... cov(Alpha\*tenure2016@0)',
    but personally speaking I hate that idea.
+ + I allow the variance of residuals to differ across years.
+   That's not something that `-xtreg-` can support.
 
-There are minor discrepencies compared to the (simplified) reference model.
-The intercept surprisingly is off by the most:
-8.7941 vs. 8.4902.
-Also notable that the variance of the random effect is much higher.
-With that said,
-very comparable results between the two.
-
-Before I present those results,
-note that I've squared σ<sub>e</sub> and σ<sub>u</sub> to give the variances
+There are minor discrepencies compared to the (simplified) reference model,
+but I would not hesitate to call these comparable results.
+Note that I've squared σ<sub>e</sub> and σ<sub>u</sub> to give the variances
 of the residual and of the random effect, respectively.
 
-|                 |**Simplified Model**|**`-sem-` Model**|
-|:-               |-                   |-                |
-|**N obs**        |1,296               |324              |
-|**N groups**     |324                 |                 |
-|**intercept**    |8.4791              |8.4902           |
-|                 |*p<0.0001*          |*p<0.0001*       |
-|**age coef.**    |0.4520              |0.4515           |
-|                 |*p<0.0001*          |*p<0.0001*       |
-|**sq. age coef.**|-0.0027             |-0.0027          |
-|                 |*p=0.0001*          |*p<0.0001*       |
-|**tenure coef.** |0.5922              |0.5923           |
-|                 |*p<0.0001*          |*p<0.0001*       |
-|**R-squared**    |0.6666              |                 |
-|**Var(ε)**       |4.2264              |4.2388           |
-|**Var(α)**       |2.3031              |2.2709           |
+|                         |**Simplified Model**|**`-sem-` Model**|
+|:-                       |-                   |-                |
+|**N obs**                |1,296               |324              |
+|**N groups**             |324                 |                 |
+|**intercept**            |8.4791              |8.4672           |
+|                         |*p<0.0001*          |*p<0.0001*       |
+|**age coef.**            |0.4520              |0.4536           |
+|                         |*p<0.0001*          |*p<0.0001*       |
+|**sq. age coef.**        |-0.0027             |-0.0028          |
+|                         |*p=0.0001*          |*p<0.0001*       |
+|**tenure coef.**         |0.5922              |0.5930           |
+|                         |*p<0.0001*          |*p<0.0001*       |
+|**Var(ε)**               |4.2264              |                 |
+|**Var(ε<sub>2013</sub>)**|                    |4.0652           |
+|**Var(ε<sub>2014</sub>)**|                    |4.7940           |
+|**Var(ε<sub>2015</sub>)**|                    |4.2190           |
+|**Var(ε<sub>2016</sub>)**|                    |3.9128           |
+|**Var(α)**               |2.3031              |2.2472           |
+|**R-squared**            |0.6666              |                 |
 
 ----
 
 Now,
 it *is* possible to get around the unbalanced panel problem in Stata,
 but it requires a jump into `-gsem-`.
-As a bonus,
-this re-enables use of factor notation!
+
+```
+webuse wagework
+drop market working
+generate sq_age = age^2
+reshape wide wage age sq_age tenure, i(personid) j(year)
+gsem (wage2013 <- age2013@b1 sq_age2013@b2 tenure2013@b3 Alpha@1 _cons@b0) ///
+     (wage2014 <- age2014@b1 sq_age2014@b2 tenure2014@b3 Alpha@1 _cons@b0) ///
+     (wage2015 <- age2015@b1 sq_age2015@b2 tenure2015@b3 Alpha@1 _cons@b0) ///
+     (wage2016 <- age2016@b1 sq_age2016@b2 tenure2016@b3 Alpha@1 _cons@b0) ///
+     , latent(Alpha) means(Alpha@0)
+```
+
+<details>
+
+<summary><p>Click here to see the complete execution log.</p></summary>
+
+```
+. webuse wagework
+(Wages for 20 to 77 year olds, 2013–2016)
+
+. drop market working
+
+. generate sq_age = age^2
+
+. reshape wide wage age sq_age tenure, i(personid) j(year)
+(j = 2013 2014 2015 2016)
+
+Data                               Long   ->   Wide
+-----------------------------------------------------------------------------
+Number of observations            2,400   ->   600
+Number of variables                   6   ->   17
+j variable (4 values)              year   ->   (dropped)
+xij variables:
+                                   wage   ->   wage2013 wage2014 ... wage2016
+                                    age   ->   age2013 age2014 ... age2016
+                                 sq_age   ->   sq_age2013 sq_age2014 ... sq_age2016
+                                 tenure   ->   tenure2013 tenure2014 ... tenure2016
+-----------------------------------------------------------------------------
+
+. gsem (wage2013 <- age2013@b1 sq_age2013@b2 tenure2013@b3 Alpha@1 _cons@b0) ///
+>     (wage2014 <- age2014@b1 sq_age2014@b2 tenure2014@b3 Alpha@1 _cons@b0) ///
+>     (wage2015 <- age2015@b1 sq_age2015@b2 tenure2015@b3 Alpha@1 _cons@b0) ///
+>     (wage2016 <- age2016@b1 sq_age2016@b2 tenure2016@b3 Alpha@1 _cons@b0) ///
+>     , latent(Alpha) means(Alpha@0)
+
+Fitting fixed-effects model:
+
+Iteration 0:   log likelihood = -4534.9152
+Iteration 1:   log likelihood = -4534.7911
+Iteration 2:   log likelihood = -4534.7911
+
+Refining starting values:
+
+Grid node 0:   log likelihood = -4421.2484
+
+Fitting full model:
+
+Iteration 0:   log likelihood = -4421.2484
+Iteration 1:   log likelihood = -4418.4097
+Iteration 2:   log likelihood = -4418.3204
+Iteration 3:   log likelihood = -4418.3203
+
+Generalized structural equation model                      Number of obs = 589
+
+Response: wage2013                                         Number of obs = 480
+Family:   Gaussian
+Link:     Identity
+
+Response: wage2014                                         Number of obs = 492
+Family:   Gaussian
+Link:     Identity
+
+Response: wage2015                                         Number of obs = 481
+Family:   Gaussian
+Link:     Identity
+
+Response: wage2016                                         Number of obs = 475
+Family:   Gaussian
+Link:     Identity
+
+Log likelihood = -4418.3203
+
+ ( 1)  [wage2013]age2013 - [wage2016]age2016 = 0
+ ( 2)  [wage2013]sq_age2013 - [wage2016]sq_age2016 = 0
+ ( 3)  [wage2013]tenure2013 - [wage2016]tenure2016 = 0
+ ( 4)  [wage2013]_cons - [wage2016]_cons = 0
+ ( 5)  [wage2013]Alpha = 1
+ ( 6)  [wage2014]age2014 - [wage2016]age2016 = 0
+ ( 7)  [wage2014]sq_age2014 - [wage2016]sq_age2016 = 0
+ ( 8)  [wage2014]tenure2014 - [wage2016]tenure2016 = 0
+ ( 9)  [wage2014]_cons - [wage2016]_cons = 0
+ (10)  [wage2014]Alpha = 1
+ (11)  [wage2015]age2015 - [wage2016]age2016 = 0
+ (12)  [wage2015]sq_age2015 - [wage2016]sq_age2016 = 0
+ (13)  [wage2015]tenure2015 - [wage2016]tenure2016 = 0
+ (14)  [wage2015]_cons - [wage2016]_cons = 0
+ (15)  [wage2015]Alpha = 1
+ (16)  [wage2016]Alpha = 1
+---------------------------------------------------------------------------------
+                | Coefficient  Std. err.      z    P>|z|     [95% conf. interval]
+----------------+----------------------------------------------------------------
+wage2013        |
+        age2013 |   .4848435   .0398808    12.16   0.000     .4066786    .5630084
+     sq_age2013 |  -.0032109   .0004367    -7.35   0.000    -.0040669   -.0023549
+     tenure2013 |   .5900128   .0171904    34.32   0.000     .5563203    .6237053
+          Alpha |          1   1.83e-17  5.5e+16   0.000            1           1
+          _cons |   7.652817   .8491275     9.01   0.000     5.988557    9.317076
+----------------+----------------------------------------------------------------
+wage2014        |
+        age2014 |   .4848435   .0398808    12.16   0.000     .4066786    .5630084
+     sq_age2014 |  -.0032109   .0004367    -7.35   0.000    -.0040669   -.0023549
+     tenure2014 |   .5900128   .0171904    34.32   0.000     .5563203    .6237053
+          Alpha |          1  (constrained)
+          _cons |   7.652817   .8491275     9.01   0.000     5.988557    9.317076
+----------------+----------------------------------------------------------------
+wage2015        |
+        age2015 |   .4848435   .0398808    12.16   0.000     .4066786    .5630084
+     sq_age2015 |  -.0032109   .0004367    -7.35   0.000    -.0040669   -.0023549
+     tenure2015 |   .5900128   .0171904    34.32   0.000     .5563203    .6237053
+          Alpha |          1  (constrained)
+          _cons |   7.652817   .8491275     9.01   0.000     5.988557    9.317076
+----------------+----------------------------------------------------------------
+wage2016        |
+        age2016 |   .4848435   .0398808    12.16   0.000     .4066786    .5630084
+     sq_age2016 |  -.0032109   .0004367    -7.35   0.000    -.0040669   -.0023549
+     tenure2016 |   .5900128   .0171904    34.32   0.000     .5563203    .6237053
+          Alpha |          1  (constrained)
+          _cons |   7.652817   .8491275     9.01   0.000     5.988557    9.317076
+----------------+----------------------------------------------------------------
+      var(Alpha)|   2.186763   .2118741                      1.808545    2.644077
+----------------+----------------------------------------------------------------
+ var(e.wage2013)|   4.139675   .3331587                      3.535591    4.846971
+ var(e.wage2014)|   4.611004   .3591311                      3.958212    5.371454
+ var(e.wage2015)|   4.347892   .3471087                      3.718126    5.084326
+ var(e.wage2016)|   3.974521   .3246879                      3.386478    4.664676
+---------------------------------------------------------------------------------
+
+. estimates store m_gsem1
+```
+
+</details>
+
+Fantastically,
+this does a great job of replicating the reference model.
+Discrepancies in the estimated variances are measured in hundredths.
+The same can be said of the intercept estimate.
+
+|                         |**Reference Model**|**`-gsem-` Model**|
+|:-                       |-                  |-                 |
+|**N obs**                |1,928              |1,928             |
+|**N groups**             |589                |589               |
+|**intercept**            |7.6294             |7.6528            |
+|                         |*p<0.0001*         |*p<0.0001*        |
+|**age coef.**            |0.4860             |0.4848            |
+|                         |*p<0.0001*         |*p<0.0001*        |
+|**sq. age coef.**        |-0.0032            |-0.0032           |
+|                         |*p<0.0001*         |*p<0.0001*        |
+|**tenure coef.**         |0.5889             |0.5900            |
+|                         |*p<0.0001*         |*p<0.0001*        |
+|**Var(ε)**               |4.2660             |                  |
+|**Var(ε<sub>2013</sub>)**|                   |4.1397            |
+|**Var(ε<sub>2014</sub>)**|                   |4.6110            |
+|**Var(ε<sub>2015</sub>)**|                   |4.3479            |
+|**Var(ε<sub>2016</sub>)**|                   |3.9745            |
+|**Var(α)**               |2.1980             |2.1868            |
+|**R-squared**            |0.6954             |                  |
+
+----
+
+Another thing that `-gsem-` enables is multilevel modeling.
+I can estimate a very nearly identical model with a much more concise syntax.
 
 ```
 webuse wagework
@@ -469,12 +653,12 @@ Grid node 0:   log likelihood =  -4499.996
 
 Fitting full model:
 
-Iteration 0:   log likelihood =  -4499.996  
-Iteration 1:   log likelihood = -4423.4644  
-Iteration 2:   log likelihood =  -4419.547  
-Iteration 3:   log likelihood = -4419.2832  
-Iteration 4:   log likelihood = -4419.2826  
-Iteration 5:   log likelihood = -4419.2826  
+Iteration 0:   log likelihood =  -4499.996
+Iteration 1:   log likelihood = -4423.4644
+Iteration 2:   log likelihood =  -4419.547
+Iteration 3:   log likelihood = -4419.2832
+Iteration 4:   log likelihood = -4419.2826
+Iteration 5:   log likelihood = -4419.2826
 
 Generalized structural equation model                    Number of obs = 1,928
 Response: wage    
@@ -503,31 +687,33 @@ Alpha[personid] |          1  (constrained)
      var(e.wage)|   4.266021   .1638204                      3.956725    4.599495
 ---------------------------------------------------------------------------------
 
-. estimates store m_gsem
+. estimates store m_gsem2
 ```
 
 </details>
 
-Fantastically,
-this does a great job of replicating the reference model.
-Discrepancies in the estimated variances are measured in hundredths.
-The same can be said of the intercept estimate.
+It is immediately clear that this multilevel SEM is almost perfectly
+replicating the reference random effects model.
 
-|                 |**Reference Model**|**`-gsem-` Model**|
-|:-               |-                  |-                 |
-|**N obs**        |1,928              |1,928             |
-|**N groups**     |589                |                  |
-|**intercept**    |7.6294             |7.6289            |
-|                 |*p<0.0001*         |*p<0.0001*        |
-|**age coef.**    |0.4860             |0.4860            |
-|                 |*p<0.0001*         |*p<0.0001*        |
-|**sq. age coef.**|-0.0032            |-0.0032           |
-|                 |*p<0.0001*         |*p<0.0001*        |
-|**tenure coef.** |0.5889             |0.5888            |
-|                 |*p<0.0001*         |*p<0.0001*        |
-|**R-squared**    |0.6954             |                  |
-|**Var(ε)**       |4.2660             |4.2660            |
-|**Var(α)**       |2.1980             |2.1980            |
+|                         |**Reference Model**|**`-gsem-` Model 1**|**`-gsem-` Model 2**|
+|:-                       |-                  |-                   |-                   |
+|**N obs**                |1,928              |1,928               |1,928               |
+|**N groups**             |589                |589                 |                    |
+|**intercept**            |7.6294             |7.6528              |7.6289              |
+|                         |*p<0.0001*         |*p<0.0001*          |*p<0.0001*          |
+|**age coef.**            |0.4860             |0.4848              |0.4860              |
+|                         |*p<0.0001*         |*p<0.0001*          |*p<0.0001*          |
+|**sq. age coef.**        |-0.0032            |-0.0032             |-0.0032             |
+|                         |*p<0.0001*         |*p<0.0001*          |*p<0.0001*          |
+|**tenure coef.**         |0.5889             |0.5900              |0.5888              |
+|                         |*p<0.0001*         |*p<0.0001*          |*p<0.0001*          |
+|**Var(ε)**               |4.2660             |                    |4.2660              |
+|**Var(ε<sub>2013</sub>)**|                   |4.1397              |
+|**Var(ε<sub>2014</sub>)**|                   |4.6110              |
+|**Var(ε<sub>2015</sub>)**|                   |4.3479              |
+|**Var(ε<sub>2016</sub>)**|                   |3.9745              |
+|**Var(α)**               |2.1980             |2.1868              |2.1980              |
+|**R-squared**            |0.6954             |                    |                    |
 
 ----
 
