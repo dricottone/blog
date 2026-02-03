@@ -131,7 +131,7 @@ BEGIN {
     # date range (always a one-liner)
     else if ($0 ~ /^ +\*.+\*/) {
       gsub(/ *\*/,"");
-      sub(/to/,"---");
+      sub(/ to /," --- ");
       print "\\textit{" $0 "}";
       print "\\vspace{.05in}";
     }

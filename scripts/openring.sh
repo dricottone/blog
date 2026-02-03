@@ -23,5 +23,6 @@ openring \
   -s https://justthesocialfacts.blogspot.com/feeds/posts/default?alt=rss \
   -s https://mitchellh.com/feed.xml \
   -s https://xeiaso.net/blog.rss \
+  -s https://www.fharrell.com/index.xml \
   < scripts/openring.html
 
