@@ -11,9 +11,9 @@ scripts/cv.tex: content/cv.md
 		-e 's/南山大学/\\begin{CJK}{UTF8}{min}&\\end{CJK}/' \
 		| scripts/cv_tex.awk > scripts/cv.tex
 
-static/files/dominic-ricottone.pdf: scripts/cv.tex
+static/files/dominic-ricottone.pdf: scripts/cv.tex scripts/texci.toml
 	mkdir -p static/files
-	cd scripts && pdflatex cv.tex
+	cd scripts && texci
 	mv scripts/cv.pdf static/files/dominic-ricottone.pdf
 	rm -rf scripts/cv.aux scripts/cv.log scripts/cv.out
 

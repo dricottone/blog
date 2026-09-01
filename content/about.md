@@ -3,7 +3,7 @@ title: Who am I? Why am I here?
 site_title: true
 ---
 
-I am a **survey statistician** living in **Chicago**.
+I am a **statistician** living in **Chicago**.
 
 I work on a variety of federal contracts that inform daily operations of the
 U.S. military and evaluate programs for ongoing improvement.

@@ -10,7 +10,7 @@ toc: true
 
 <!-- Ignore above content for PDF and HTML versions -->
 
-I am a survey sampling statistician with focuses in survey sample design and non-response bias analysis.
+I am a sampling statistician with focuses in survey sample design and non-response bias analysis.
 Before I began working with surveys, I trained in econometrics and positive political science.
 I am proficient with several programming languages including Stata, Python, and SPSS.
 
@@ -19,7 +19,7 @@ I am proficient with several programming languages including Stata, Python, and 
 ## Employment
 ### Fors Marsh
 
- + #### Survey Sampling Statistician
+ + #### Sampling Statistician
    *April 2024 to present*
    + Designing sampling and weighting plans for official governmental studies
    + Explaining probability theory and statistics methods in plain language to general audiences
@@ -69,6 +69,12 @@ I am proficient with several programming languages including Stata, Python, and 
 ------
 
 ## Education
+
+### Colorado State University
+
+ + #### Master of Applied Statistics
+   *June 2026 to May 2029 (anticipated)*
+
 ### University of Rochester
 
  + #### B.A. Political Science, Economics

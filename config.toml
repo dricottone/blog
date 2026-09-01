@@ -1,5 +1,5 @@
 baseURL = "https://www.dominic-ricottone.com/"
-languageCode = "en-us"
+locale = "en-US"
 title = "Dominic Ricottone"
 disableKinds = ["taxonomy"]
 summaryLength = 20

@@ -1,7 +1,7 @@
 ---
 title: A Series on SEM - Part 5
 date: "2026-03-19T17:59:50-05:00"
-draft: true
+draft: false
 ---
 
 This is the final part of a series on structural equation modeling (SEM).
